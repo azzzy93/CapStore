@@ -14,4 +14,7 @@
     <color name="black_text_30">#4D12121D</color>
     <color name="yellow_start_back">#FCDC31</color>
     <color name="blue_text">#2566AF</color>
+    <color name="blue_text_1">#1976D2</color>
+    <color name="black_edit_text_back">#1A202030</color>
+    <color name="grey_text_price_old">#828282</color>
 </resources>

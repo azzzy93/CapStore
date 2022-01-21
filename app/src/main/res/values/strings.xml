@@ -22,4 +22,13 @@
     <string name="enter_new_password">Введите новый пароль</string>
     <string name="confirm_new_password">Подтвердите новый пароль</string>
     <string name="you_update_password">Вы обновили пароль</string>
+    <string name="search">Поиск</string>
+    <string name="popular_brands">Популярные Бренды</string>
+    <string name="new_era">New Era</string>
+    <string name="adidas">Adidas</string>
+    <string name="nike">Nike</string>
+    <string name="vans">Vans</string>
+    <string name="bestsellers">Бестселлеры</string>
+    <string name="watch_all">Смотреть все</string>
+    <string name="promotions">Акции</string>
 </resources>

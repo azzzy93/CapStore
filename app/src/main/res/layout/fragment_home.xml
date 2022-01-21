@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="15dp"
+    android:paddingBottom="125dp"
+    tools:context=".ui.fragments.home.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height_60"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/rounded_edit_text"
+                android:drawableStart="@drawable/search_icon"
+                android:drawableEnd="@drawable/settings_icon"
+                android:drawablePadding="18dp"
+                android:fontFamily="@font/sf_ui_text_regular"
+                android:hint="@string/search"
+                android:padding="18dp"
+                android:textColor="@color/black_text" />
+
+            <ImageView
+                android:id="@+id/iv_home_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/img_home_page"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/sf_ui_display_bold"
+                android:text="@string/popular_brands"
+                android:textColor="@color/black_text"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_new_era_round"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:src="@drawable/new_era_round"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/sf_ui_text_bold"
+                        android:gravity="center"
+                        android:text="@string/new_era"
+                        android:textColor="@color/black_text"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_adidas_round"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:src="@drawable/adidas_round"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/sf_ui_text_bold"
+                        android:gravity="center"
+                        android:text="@string/adidas"
+                        android:textColor="@color/black_text"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_nike_round"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:src="@drawable/nike_round"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/sf_ui_text_bold"
+                        android:gravity="center"
+                        android:text="@string/nike"
+                        android:textColor="@color/black_text"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_vans_round"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:src="@drawable/vans_round"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/sf_ui_text_bold"
+                        android:gravity="center"
+                        android:text="@string/vans"
+                        android:textColor="@color/black_text"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sf_ui_display_bold"
+                    android:text="@string/bestsellers"
+                    android:textColor="@color/black_text"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_watch_all_best"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sf_ui_display_bold"
+                    android:gravity="end"
+                    android:text="@string/watch_all"
+                    android:textColor="@color/blue_text_1"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_bestsellers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_of_bestsellers" />
+
+            <ImageView
+                android:id="@+id/iv_home_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/img_home_page"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sf_ui_display_bold"
+                    android:text="@string/promotions"
+                    android:textColor="@color/black_text"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_watch_all_prom"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sf_ui_display_bold"
+                    android:gravity="end"
+                    android:text="@string/watch_all"
+                    android:textColor="@color/blue_text_1"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_promotions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_of_bestsellers" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/startFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/startFragment"
@@ -28,5 +28,10 @@
         android:name="kg.geektech.capstore.ui.fragments.restore_password.RestorePasswordFragment"
         android:label="fragment_restore_password"
         tools:layout="@layout/fragment_restore_password" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="kg.geektech.capstore.ui.fragments.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
 
 </navigation>
