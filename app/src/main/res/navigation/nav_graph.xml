@@ -33,5 +33,25 @@
         android:name="kg.geektech.capstore.ui.fragments.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/bestsellersFragment"
+        android:name="kg.geektech.capstore.ui.fragments.bestsellers.BestsellersFragment"
+        android:label="fragment_bestsellers"
+        tools:layout="@layout/fragment_bestsellers" />
+    <fragment
+        android:id="@+id/likeFragment"
+        android:name="kg.geektech.capstore.ui.fragments.like.LikeFragment"
+        android:label="fragment_like"
+        tools:layout="@layout/fragment_bestsellers" />
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="kg.geektech.capstore.ui.fragments.user.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" />
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="kg.geektech.capstore.ui.fragments.product_detail.ProductDetailFragment"
+        android:label="fragment_product_detail"
+        tools:layout="@layout/fragment_product_detail" />
 
 </navigation>

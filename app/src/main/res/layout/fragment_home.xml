@@ -1,16 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:paddingHorizontal="15dp"
-    android:paddingBottom="125dp"
     tools:context=".ui.fragments.home.HomeFragment">
 
-    <ScrollView
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_search"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/btn_height_60"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/rounded_edit_text"
+        android:drawableStart="@drawable/search_icon"
+        android:drawableEnd="@drawable/settings_icon"
+        android:drawablePadding="18dp"
+        android:fontFamily="@font/sf_ui_text_regular"
+        android:hint="@string/search"
+        android:padding="18dp"
+        android:textColor="@color/black_text"
+        app:layout_constraintBottom_toTopOf="@id/scroll_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_search"
         tools:ignore="UselessParent">
 
         <LinearLayout
@@ -18,28 +37,89 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_search"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/btn_height_60"
-                android:layout_marginTop="60dp"
-                android:background="@drawable/rounded_edit_text"
-                android:drawableStart="@drawable/search_icon"
-                android:drawableEnd="@drawable/settings_icon"
-                android:drawablePadding="18dp"
-                android:fontFamily="@font/sf_ui_text_regular"
-                android:hint="@string/search"
-                android:padding="18dp"
-                android:textColor="@color/black_text" />
+                android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/iv_home_main"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/img_home_page"
-                tools:ignore="ContentDescription" />
+                <View
+                    android:id="@+id/view_banner_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rounded_image_banner"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/img_banner_1_left"
+                    app:layout_constraintStart_toStartOf="@id/view_banner_1"
+                    app:layout_constraintTop_toTopOf="@id/view_banner_1"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/iv_banner_1_bottom"
+                    android:layout_width="101dp"
+                    android:layout_height="92dp"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/img_banner_1_bottom"
+                    app:layout_constraintBottom_toBottomOf="@id/view_banner_1"
+                    app:layout_constraintStart_toStartOf="@id/view_banner_1"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/iv_banner_1_right"
+                    android:layout_width="196dp"
+                    android:layout_height="165dp"
+                    android:layout_marginTop="-10dp"
+                    android:src="@drawable/img_banner_1_right"
+                    app:layout_constraintEnd_toEndOf="@id/view_banner_1"
+                    app:layout_constraintTop_toTopOf="@id/view_banner_1"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:layout_width="167dp"
+                    android:layout_height="115dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="6dp"
+                    android:src="@drawable/img_banner_1_right_2"
+                    app:layout_constraintEnd_toEndOf="@id/iv_banner_1_right"
+                    app:layout_constraintTop_toTopOf="@id/iv_banner_1_right"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/tv_banner_1_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-10dp"
+                    android:layout_marginTop="34dp"
+                    android:layout_marginEnd="-18dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:text="@string/new_era"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black_text"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="@id/iv_banner_1_bottom"
+                    app:layout_constraintStart_toStartOf="@id/iv_banner_1_bottom"
+                    app:layout_constraintTop_toTopOf="@id/iv_banner_1_bottom" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_ui_display_bold"
+                    android:text="@string/collection_2021"
+                    android:textColor="@color/black_text_banner"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_banner_1_1"
+                    app:layout_constraintTop_toBottomOf="@id/tv_banner_1_1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -57,6 +137,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:id="@+id/container_for_popular"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -82,6 +163,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/container_for_popular_2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -195,14 +277,56 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/list_of_bestsellers" />
 
-            <ImageView
-                android:id="@+id/iv_home_2"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/img_home_page"
-                tools:ignore="ContentDescription" />
+                android:layout_marginTop="20dp">
+
+                <View
+                    android:id="@+id/view_banner_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/rounded_image_banner_2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_banner_2_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:includeFontPadding="false"
+                    android:text="@string/supreme_amp_new_era"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="@id/view_banner_2"
+                    app:layout_constraintTop_toTopOf="@id/view_banner_2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:includeFontPadding="false"
+                    android:text="@string/collaboration"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_banner_2_1"
+                    app:layout_constraintTop_toBottomOf="@id/tv_banner_2_1" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="156dp"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginBottom="-14dp"
+                    android:adjustViewBounds="false"
+                    android:src="@drawable/img_banner_2"
+                    app:layout_constraintBottom_toBottomOf="@id/view_banner_2"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -244,4 +368,4 @@
 
     </ScrollView>
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

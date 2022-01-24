@@ -12,9 +12,15 @@
     <color name="black_text">#12121D</color>
     <color name="black_text_54">#8A12121D</color>
     <color name="black_text_30">#4D12121D</color>
+    <color name="black_text_5">#0D12121D</color>
+    <color name="black_text_10">#1A12121D</color>
+    <color name="black_text_banner">#555252</color>
     <color name="yellow_start_back">#FCDC31</color>
     <color name="blue_text">#2566AF</color>
+    <color name="blue_oval_line">#6842FF</color>
     <color name="blue_text_1">#1976D2</color>
     <color name="black_edit_text_back">#1A202030</color>
     <color name="grey_text_price_old">#828282</color>
+    <color name="white_back_banner">#F4F4F4</color>
+    <color name="white_back_detail">#F3F3F3</color>
 </resources>

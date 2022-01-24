@@ -4,10 +4,11 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import kg.geektech.capstore.R
 import kg.geektech.capstore.databinding.ActivityMainBinding
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,12 +25,18 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
 
         showOrHideView()
+        initBottomNavigationView()
+    }
+
+    private fun initBottomNavigationView() {
+        val navController = findNavController(R.id.fragmentContainerView)
+        binding.bottomNav.setupWithNavController(navController)
     }
 
     private fun showOrHideView() {
         navController.navigate(R.id.startFragment)
 
-        navController.addOnDestinationChangedListener { controller, destination, arguments ->
+        navController.addOnDestinationChangedListener { _, destination, _ ->
             if (destination.id == R.id.registrationFragment ||
                 destination.id == R.id.restorePasswordFragment ||
                 destination.id == R.id.signInFragment ||

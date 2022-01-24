@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:paddingEnd="15dp"
-    tools:ignore="RtlSymmetry">
+    android:padding="10dp">
 
     <ImageView
         android:id="@+id/iv_bestseller"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription"
@@ -24,27 +24,43 @@
         android:fontFamily="@font/sf_ui_text_bold"
         android:textColor="@color/black_text"
         android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/iv_bestseller"
         app:layout_constraintTop_toBottomOf="@id/iv_bestseller"
         tools:text="@string/adidas" />
 
-    <ImageView
-        android:id="@+id/iv_like"
+    <FrameLayout
+        android:id="@+id/container_like"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:src="@drawable/like"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_brand"
-        tools:ignore="ContentDescription" />
+        app:layout_constraintEnd_toEndOf="@id/iv_bestseller"
+        app:layout_constraintTop_toTopOf="@id/tv_brand">
+
+        <ImageView
+            android:id="@+id/iv_like"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/like_bottom_nav"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/iv_like_selected"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/like_selected"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+
+    </FrameLayout>
 
     <TextView
         android:id="@+id/tv_model"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sf_ui_text_regular"
         android:textColor="@color/black_text_30"
         android:textSize="11sp"
-        app:layout_constraintTop_toBottomOf="@id/iv_like"
+        app:layout_constraintStart_toStartOf="@id/iv_bestseller"
+        app:layout_constraintTop_toBottomOf="@id/container_like"
         tools:text="San Francisco Baseball" />
 
     <TextView
@@ -52,11 +68,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sf_ui_text_bold"
+        android:paddingEnd="7dp"
         android:textColor="@color/grey_text_price_old"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@id/tv_price"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_price"
+        app:layout_constraintStart_toStartOf="@id/iv_bestseller"
         app:layout_constraintTop_toTopOf="@id/tv_price"
+        tools:ignore="RtlSymmetry"
         tools:text="4600 сом" />
 
     <TextView
@@ -67,6 +86,7 @@
         android:fontFamily="@font/sf_ui_text_bold"
         android:textColor="@color/yellow"
         android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/tv_price_old"
         app:layout_constraintTop_toBottomOf="@id/tv_model"
         tools:text="3800 сом" />
