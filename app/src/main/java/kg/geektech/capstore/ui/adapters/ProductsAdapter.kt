@@ -11,6 +11,8 @@ import kg.geektech.capstore.models.Products
 class ProductsAdapter(private val products: List<Products>) :
     RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
 
+    private lateinit var onItemClick: OnItemClick
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ListOfBestsellersBinding.inflate(LayoutInflater.from(parent.context))
         return ViewHolder(binding)
@@ -18,13 +20,16 @@ class ProductsAdapter(private val products: List<Products>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.onBind(products[position])
+        holder.onItemClickListeners(products[position])
     }
 
-    override fun getItemCount(): Int {
-        return products.size
+    override fun getItemCount(): Int = products.size
+
+    fun setOnItemClick(onItemClick: OnItemClick) {
+        this.onItemClick = onItemClick
     }
 
-    class ViewHolder(private val binding: ListOfBestsellersBinding) :
+    inner class ViewHolder(private val binding: ListOfBestsellersBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun onBind(product: Products) {
@@ -32,6 +37,10 @@ class ProductsAdapter(private val products: List<Products>) :
             binding.tvBrand.text = product.brand
             binding.tvModel.text = product.model
             binding.tvPrice.text = product.price
+        }
+
+        fun onItemClickListeners(product: Products) {
+
             if (product.priceOld != null) {
                 binding.tvPriceOld.text = product.priceOld
                 binding.tvPriceOld.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
@@ -39,6 +48,7 @@ class ProductsAdapter(private val products: List<Products>) :
             } else {
                 binding.tvPriceOld.visibility = View.GONE
             }
+
             binding.containerLike.setOnClickListener {
                 if (binding.ivLikeSelected.visibility == View.GONE) {
                     binding.ivLike.visibility = View.GONE
@@ -48,7 +58,31 @@ class ProductsAdapter(private val products: List<Products>) :
                     binding.ivLike.visibility = View.VISIBLE
                 }
             }
-        }
 
+            binding.containerForImage.setOnClickListener {
+                onItemClick.onClick(product)
+            }
+
+            binding.tvBrand.setOnClickListener {
+                onItemClick.onClick(product)
+            }
+
+            binding.tvModel.setOnClickListener {
+                onItemClick.onClick(product)
+            }
+
+            binding.tvPrice.setOnClickListener {
+                onItemClick.onClick(product)
+            }
+
+            binding.tvPriceOld.setOnClickListener {
+                onItemClick.onClick(product)
+            }
+
+        }
+    }
+
+    interface OnItemClick {
+        fun onClick(product: Products)
     }
 }

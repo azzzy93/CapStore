@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:paddingHorizontal="21dp">
+    android:paddingHorizontal="21dp"
+    tools:context=".ui.fragments.my_orders.MyOrdersFragment">
 
     <ImageView
         android:id="@+id/iv_back"
@@ -27,19 +27,19 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/sf_ui_display_bold"
+        android:text="@string/my_orders"
         android:textColor="@color/black_text"
         android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_back"
-        tools:text="@string/bestsellers" />
+        app:layout_constraintTop_toBottomOf="@id/iv_back" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv"
+        android:id="@+id/rv_my_orders"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_title"
-        tools:listitem="@layout/list_of_bestsellers" />
-
+        tools:listitem="@layout/list_my_orders" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

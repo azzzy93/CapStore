@@ -5,12 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment
+import androidx.recyclerview.widget.GridLayoutManager
 import kg.geektech.capstore.R
 import kg.geektech.capstore.databinding.FragmentBestsellersBinding
 import kg.geektech.capstore.models.Products
 import kg.geektech.capstore.ui.adapters.ProductsAdapter
 
-class LikeFragment : Fragment() {
+class LikeFragment : Fragment(), ProductsAdapter.OnItemClick {
 
     private lateinit var binding: FragmentBestsellersBinding
     private lateinit var adapter: ProductsAdapter
@@ -43,6 +45,8 @@ class LikeFragment : Fragment() {
 
     private fun initAdapter() {
         adapter = ProductsAdapter(fillList())
+        adapter.setOnItemClick(this)
+        binding.rv.layoutManager = GridLayoutManager(requireContext(), 2)
         binding.rv.adapter = adapter
     }
 
@@ -50,7 +54,7 @@ class LikeFragment : Fragment() {
         val data = mutableListOf<Products>()
         data.add(
             Products(
-                R.drawable.img_bestseller,
+                R.drawable.cap_2,
                 "New Era",
                 "French Fries Series",
                 "4500 сом"
@@ -58,7 +62,7 @@ class LikeFragment : Fragment() {
         )
         data.add(
             Products(
-                R.drawable.img_bestseller,
+                R.drawable.cap_2,
                 "Adidas",
                 "San Francisco Baseball",
                 "3800 сом"
@@ -66,7 +70,7 @@ class LikeFragment : Fragment() {
         )
         data.add(
             Products(
-                R.drawable.img_bestseller,
+                R.drawable.cap_4,
                 "Nike",
                 "New York yankies",
                 "3500 сом"
@@ -74,7 +78,7 @@ class LikeFragment : Fragment() {
         )
         data.add(
             Products(
-                R.drawable.img_bestseller,
+                R.drawable.cap_3,
                 "New Era",
                 "French Fries Series",
                 "4500 сом"
@@ -82,7 +86,7 @@ class LikeFragment : Fragment() {
         )
         data.add(
             Products(
-                R.drawable.img_bestseller,
+                R.drawable.cap_1,
                 "Adidas",
                 "San Francisco Baseball",
                 "3800 сом"
@@ -90,7 +94,7 @@ class LikeFragment : Fragment() {
         )
         data.add(
             Products(
-                R.drawable.img_bestseller,
+                R.drawable.cap_2,
                 "Nike",
                 "New York yankies",
                 "3500 сом"
@@ -98,7 +102,7 @@ class LikeFragment : Fragment() {
         )
         data.add(
             Products(
-                R.drawable.img_bestseller,
+                R.drawable.cap_4,
                 "New Era",
                 "French Fries Series",
                 "4500 сом"
@@ -106,7 +110,7 @@ class LikeFragment : Fragment() {
         )
         data.add(
             Products(
-                R.drawable.img_bestseller,
+                R.drawable.cap_4,
                 "Adidas",
                 "San Francisco Baseball",
                 "3800 сом"
@@ -114,7 +118,7 @@ class LikeFragment : Fragment() {
         )
         data.add(
             Products(
-                R.drawable.img_bestseller,
+                R.drawable.cap_4,
                 "Nike",
                 "New York yankies",
                 "3500 сом"
@@ -122,7 +126,7 @@ class LikeFragment : Fragment() {
         )
         data.add(
             Products(
-                R.drawable.img_bestseller,
+                R.drawable.cap_2,
                 "New Era",
                 "French Fries Series",
                 "4500 сом"
@@ -130,7 +134,7 @@ class LikeFragment : Fragment() {
         )
         data.add(
             Products(
-                R.drawable.img_bestseller,
+                R.drawable.cap_1,
                 "Adidas",
                 "San Francisco Baseball",
                 "3800 сом"
@@ -138,13 +142,24 @@ class LikeFragment : Fragment() {
         )
         data.add(
             Products(
-                R.drawable.img_bestseller,
+                R.drawable.cap_1,
                 "Nike",
                 "New York yankies",
                 "3500 сом"
             )
         )
         return data
+    }
+
+    override fun onClick(product: Products) {
+        navigateFragment(R.id.productDetailFragment)
+    }
+
+    private fun navigateFragment(resId: Int) {
+        val navHostFragment =
+            activity?.supportFragmentManager?.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+        val navController = navHostFragment.navController
+        navController.navigate(resId)
     }
 
 }

@@ -6,12 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import kg.geektech.capstore.R
 import kg.geektech.capstore.databinding.FragmentHomeBinding
 import kg.geektech.capstore.models.Products
 import kg.geektech.capstore.ui.adapters.ProductsAdapter
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), ProductsAdapter.OnItemClick {
 
     private lateinit var binding: FragmentHomeBinding
     private lateinit var bestAdapter: ProductsAdapter
@@ -42,15 +43,19 @@ class HomeFragment : Fragment() {
         binding.containerForPopular.setOnClickListener {
             navigateFragment(R.id.bestsellersFragment)
         }
-        binding.containerForPopular2.setOnClickListener {
-            navigateFragment(R.id.productDetailFragment)
-        }
     }
 
     private fun initAdapter() {
         bestAdapter = ProductsAdapter(fillListBest())
+        bestAdapter.setOnItemClick(this)
+        binding.rvBestsellers.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.rvBestsellers.adapter = bestAdapter
+
         promAdapter = ProductsAdapter(fillListProm())
+        promAdapter.setOnItemClick(this)
+        binding.rvPromotions.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.rvPromotions.adapter = promAdapter
     }
 
@@ -58,7 +63,7 @@ class HomeFragment : Fragment() {
         val data = mutableListOf<Products>()
         data.add(
             Products(
-                R.drawable.img_bestseller,
+                R.drawable.cap_1,
                 "Adidas",
                 "San Francisco Baseball",
                 "3800 сом"
@@ -66,7 +71,7 @@ class HomeFragment : Fragment() {
         )
         data.add(
             Products(
-                R.drawable.img_bestseller,
+                R.drawable.cap_4,
                 "Adidas",
                 "San Francisco Baseball",
                 "3800 сом"
@@ -74,7 +79,7 @@ class HomeFragment : Fragment() {
         )
         data.add(
             Products(
-                R.drawable.img_bestseller,
+                R.drawable.cap_1,
                 "Adidas",
                 "San Francisco Baseball",
                 "3800 сом"
@@ -82,7 +87,7 @@ class HomeFragment : Fragment() {
         )
         data.add(
             Products(
-                R.drawable.img_bestseller,
+                R.drawable.cap_3,
                 "Adidas",
                 "San Francisco Baseball",
                 "3800 сом"
@@ -90,7 +95,7 @@ class HomeFragment : Fragment() {
         )
         data.add(
             Products(
-                R.drawable.img_bestseller,
+                R.drawable.cap_2,
                 "Adidas",
                 "San Francisco Baseball",
                 "3800 сом"
@@ -103,7 +108,7 @@ class HomeFragment : Fragment() {
         val data = mutableListOf<Products>()
         data.add(
             Products(
-                R.drawable.img_bestseller,
+                R.drawable.cap_3,
                 "Adidas",
                 "San Francisco Baseball",
                 "3800 сом",
@@ -112,7 +117,7 @@ class HomeFragment : Fragment() {
         )
         data.add(
             Products(
-                R.drawable.img_bestseller,
+                R.drawable.cap_1,
                 "Adidas",
                 "San Francisco Baseball",
                 "3800 сом",
@@ -121,7 +126,7 @@ class HomeFragment : Fragment() {
         )
         data.add(
             Products(
-                R.drawable.img_bestseller,
+                R.drawable.cap_1,
                 "Adidas",
                 "San Francisco Baseball",
                 "3800 сом",
@@ -130,7 +135,7 @@ class HomeFragment : Fragment() {
         )
         data.add(
             Products(
-                R.drawable.img_bestseller,
+                R.drawable.cap_2,
                 "Adidas",
                 "San Francisco Baseball",
                 "3800 сом",
@@ -139,7 +144,7 @@ class HomeFragment : Fragment() {
         )
         data.add(
             Products(
-                R.drawable.img_bestseller,
+                R.drawable.cap_4,
                 "Adidas",
                 "San Francisco Baseball",
                 "3800 сом",
@@ -154,5 +159,9 @@ class HomeFragment : Fragment() {
             activity?.supportFragmentManager?.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         val navController = navHostFragment.navController
         navController.navigate(resId)
+    }
+
+    override fun onClick(product: Products) {
+        navigateFragment(R.id.productDetailFragment)
     }
 }

@@ -30,9 +30,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/sf_ui_text_regular"
-                android:text="@string/you_update_password"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                tools:text="@string/you_update_password" />
 
         </LinearLayout>
 

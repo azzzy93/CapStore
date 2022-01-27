@@ -3,16 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/bottom_like_select.xml" value="0.22763157894736843" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/bottom_nav_selector.xml" value="0.22763157894736843" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/circle_background.xml" value="0.22763157894736843" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/circle_background_2.xml" value="0.22763157894736843" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/circle_red.xml" value="0.22763157894736843" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/name_icon.xml" value="0.22763157894736843" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/num_phone_icon.xml" value="0.22763157894736843" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/password_icon.xml" value="0.22763157894736843" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/rounded_back_for_detail.xml" value="0.22763157894736843" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/rounded_bottom_nav.xml" value="0.22763157894736843" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/rounded_edit_text.xml" value="0.22763157894736843" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/rounded_for_image.xml" value="0.2115" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/rounded_image_banner.xml" value="0.22763157894736843" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/rounded_image_banner_2.xml" value="0.22763157894736843" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/rounded_my_orders.xml" value="0.2115" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/search_icon.xml" value="0.22763157894736843" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/settings_icon.xml" value="0.22763157894736843" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/tab_def.xml" value="0.22763157894736843" />
@@ -21,15 +26,22 @@
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/custom_toast.xml" value="0.2" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_bestsellers.xml" value="0.2" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_edit_profile.xml" value="0.2" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_like.xml" value="0.21403508771929824" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_my_order_detail.xml" value="0.21403508771929824" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_my_order_detaile.xml" value="0.21403508771929824" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_my_orders.xml" value="0.21403508771929824" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_product_detail.xml" value="0.2" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_registration.xml" value="0.2" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_restore_password.xml" value="0.21403508771929824" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_sign_in.xml" value="0.2" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_start.xml" value="0.2" />
-        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_user.xml" value="0.21403508771929824" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_user.xml" value="0.2" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/layout_for_counter.xml" value="0.72" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/list_image_list.xml" value="0.21403508771929824" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/list_my_orders.xml" value="0.264" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/list_of_bestsellers.xml" value="0.6" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/menu/bottom_nav_view_menu.xml" value="0.21403508771929824" />
       </map>

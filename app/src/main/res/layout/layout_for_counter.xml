@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/circle_yellow"
+        android:fontFamily="@font/sf_ui_display_bold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="4dp"
+        android:textColor="@android:color/white"
+        android:textSize="11sp" />
+</FrameLayout>

@@ -8,7 +8,6 @@
         android:id="@+id/iv_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:background="@color/black_text"
         tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

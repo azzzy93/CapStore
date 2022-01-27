@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="21dp"
+    tools:context=".ui.fragments.profile.ProfileFragment">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="74dp"
+        android:background="@drawable/circle_background"
+        android:backgroundTint="@color/black_text_5"
+        android:padding="10dp"
+        android:src="@drawable/back_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/sf_ui_display_bold"
+        android:text="@string/profile"
+        android:textColor="@color/black_text"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_back" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/container_for_Image"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="37dp"
+        app:cardCornerRadius="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+        <ImageView
+            android:id="@+id/iv_user"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/start_fragment_back"
+            tools:ignore="ContentDescription" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/sf_ui_display_bold"
+        android:text="@string/azizbek_kudaibergenov"
+        android:textColor="@color/black_text"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/container_for_Image"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <ImageView
+        android:id="@+id/iv_email"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="42dp"
+        android:src="@drawable/yellow_message"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container_for_Image"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:fontFamily="@font/sf_ui_display_regular"
+        android:text="@string/azizbek3993_gmail_com"
+        android:textColor="@color/black_text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_email"
+        app:layout_constraintStart_toEndOf="@id/iv_email"
+        app:layout_constraintTop_toTopOf="@id/iv_email" />
+
+    <ImageView
+        android:id="@+id/iv_phone_number"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/yellow_iphone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_email"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/tv_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:fontFamily="@font/sf_ui_display_regular"
+        android:text="@string/_996705717148"
+        android:textColor="@color/black_text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_phone_number"
+        app:layout_constraintStart_toEndOf="@id/iv_phone_number"
+        app:layout_constraintTop_toTopOf="@id/iv_phone_number" />
+
+    <ImageView
+        android:id="@+id/iv_address"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/yellow_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_phone_number"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:fontFamily="@font/sf_ui_display_regular"
+        android:text="@string/address_def"
+        android:textColor="@color/black_text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_address"
+        app:layout_constraintStart_toEndOf="@id/iv_address"
+        app:layout_constraintTop_toTopOf="@id/iv_address" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_edit_profile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height_60"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="140dp"
+        android:backgroundTint="@color/yellow"
+        android:text="@string/edit_profile"
+        android:textAllCaps="false"
+        app:cornerRadius="60dp"
+        app:layout_constraintTop_toBottomOf="@id/iv_address" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

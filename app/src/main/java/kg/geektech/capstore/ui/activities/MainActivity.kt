@@ -1,12 +1,15 @@
 package kg.geektech.capstore.ui.activities
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationItemView
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView
 import kg.geektech.capstore.R
 import kg.geektech.capstore.databinding.ActivityMainBinding
 
@@ -29,8 +32,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initBottomNavigationView() {
-        val navController = findNavController(R.id.fragmentContainerView)
         binding.bottomNav.setupWithNavController(navController)
+
+        val mBottomNavigationMenuView: BottomNavigationMenuView =
+            binding.bottomNav.getChildAt(0) as BottomNavigationMenuView
+        val view = mBottomNavigationMenuView.getChildAt(1)
+        val itemView: BottomNavigationItemView = view as BottomNavigationItemView
+        val cartBadge: View = LayoutInflater.from(this)
+            .inflate(R.layout.layout_for_counter, mBottomNavigationMenuView, false)
+        cartBadge.findViewById<TextView>(R.id.tv_count).text = "5"
+        itemView.addView(cartBadge)
     }
 
     private fun showOrHideView() {
