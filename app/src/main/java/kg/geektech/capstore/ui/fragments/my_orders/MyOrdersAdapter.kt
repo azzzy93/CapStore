@@ -1,4 +1,4 @@
-package kg.geektech.capstore.ui.adapters
+package kg.geektech.capstore.ui.fragments.my_orders
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -14,13 +14,13 @@ class MyOrdersAdapter(private var list: ArrayList<MyOrders>) :
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): MyOrdersAdapter.OrderViewHolder {
+    ): OrderViewHolder {
         val binding: ListMyOrdersBinding =
             ListMyOrdersBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return OrderViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: MyOrdersAdapter.OrderViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: OrderViewHolder, position: Int) {
         holder.onBind(list[position])
         holder.onItemClickListeners(list[position])
     }

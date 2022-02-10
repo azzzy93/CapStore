@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import kg.geektech.capstore.R
 import kg.geektech.capstore.databinding.FragmentEditProfileBinding
 import kg.geektech.capstore.extensions.load
+import kg.geektech.capstore.extensions.showCustomToast
 import kg.geektech.capstore.ui.fragments.profile.ProfileFragment
 
 class EditProfileFragment : Fragment() {
@@ -65,21 +66,12 @@ class EditProfileFragment : Fragment() {
         }
 
         binding.btnEditProfile.setOnClickListener {
-            showCustomToast(getString(R.string.profile_changed))
+            requireContext().showCustomToast(
+                getString(R.string.profile_changed),
+                requireActivity(),
+                layoutInflater
+            )
         }
-    }
-
-    private fun showCustomToast(text: String) {
-        val layout = layoutInflater.inflate(
-            R.layout.custom_toast,
-            activity?.findViewById(R.id.custom_toast_layout_id)
-        )
-        layout.findViewById<TextView>(R.id.tv_custom_toast).text = text
-        val toast = Toast(requireContext())
-        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0)
-        toast.duration = Toast.LENGTH_SHORT
-        toast.view = layout
-        toast.show()
     }
 
     private fun openGallery() {

@@ -1,4 +1,4 @@
-package kg.geektech.capstore.ui.adapters
+package kg.geektech.capstore.ui.fragments.product_detail
 
 import android.view.LayoutInflater
 import android.view.View
@@ -30,7 +30,5 @@ class ImageListAdapter(val list: List<Int>) :
             val imageView: ImageView = itemView.findViewById(R.id.iv_list)
             imageView.setImageResource(i)
         }
-
     }
-
 }

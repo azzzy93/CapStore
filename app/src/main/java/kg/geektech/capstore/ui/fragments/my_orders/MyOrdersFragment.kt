@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kg.geektech.capstore.R
 import kg.geektech.capstore.databinding.FragmentMyOrdersBinding
 import kg.geektech.capstore.models.MyOrders
-import kg.geektech.capstore.ui.adapters.MyOrdersAdapter
 
 class MyOrdersFragment : Fragment(), MyOrdersAdapter.OnItemClick {
 

@@ -3,11 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/back_for_cart.xml" value="0.2115" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/back_for_cart_count_button.xml" value="0.2115" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/back_for_cart_top_line.xml" value="0.2115" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/back_for_custom_alert_dialog.xml" value="0.2115" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/bottom_like_select.xml" value="0.22763157894736843" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/bottom_nav_selector.xml" value="0.22763157894736843" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/bottom_sheet_background.xml" value="0.2115" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/circle_background.xml" value="0.22763157894736843" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/circle_background_2.xml" value="0.22763157894736843" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/circle_red.xml" value="0.22763157894736843" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/circle_yellow.xml" value="0.2115" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/name_icon.xml" value="0.22763157894736843" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/num_phone_icon.xml" value="0.22763157894736843" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/password_icon.xml" value="0.22763157894736843" />
@@ -24,12 +30,16 @@
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/tab_selected.xml" value="0.22763157894736843" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/tab_selector.xml" value="0.22763157894736843" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.2" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/button.xml" value="0.21403508771929824" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/custom_alert_dialog.xml" value="0.21403508771929824" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/custom_toast.xml" value="0.2" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_bestsellers.xml" value="0.2" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_cart_shop.xml" value="0.2" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_edit_profile.xml" value="0.2" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_like.xml" value="0.21403508771929824" />
-        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_my_order_detail.xml" value="0.21403508771929824" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_my_order_detail.xml" value="0.2" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_my_order_detaile.xml" value="0.21403508771929824" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_my_orders.xml" value="0.21403508771929824" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/fragment_product_detail.xml" value="0.2" />
@@ -43,6 +53,7 @@
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/list_image_list.xml" value="0.21403508771929824" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/list_my_orders.xml" value="0.264" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/list_of_bestsellers.xml" value="0.6" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/layout/list_of_cart_shop.xml" value="0.6" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/menu/bottom_nav_view_menu.xml" value="0.21403508771929824" />
       </map>
     </option>

@@ -36,13 +36,14 @@ class ProductsAdapter(private val products: List<Products>) :
             product.img?.let { binding.ivBestseller.setImageResource(it) }
             binding.tvBrand.text = product.brand
             binding.tvModel.text = product.model
-            binding.tvPrice.text = product.price
+            val price = product.price.toString() + " сом"
+            binding.tvPrice.text = price
         }
 
         fun onItemClickListeners(product: Products) {
-
             if (product.priceOld != null) {
-                binding.tvPriceOld.text = product.priceOld
+                val oldPrice = product.priceOld.toString() + " сом"
+                binding.tvPriceOld.text = oldPrice
                 binding.tvPriceOld.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
                 binding.tvPriceOld.visibility = View.VISIBLE
             } else {

@@ -13,8 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.tabs.TabLayoutMediator
 import kg.geektech.capstore.R
 import kg.geektech.capstore.databinding.FragmentProductDetailBinding
+import kg.geektech.capstore.extensions.showCustomToast
 import kg.geektech.capstore.models.Products
-import kg.geektech.capstore.ui.adapters.ImageListAdapter
 import kg.geektech.capstore.ui.adapters.ProductsAdapter
 
 class ProductDetailFragment : Fragment(), ProductsAdapter.OnItemClick {
@@ -50,21 +50,12 @@ class ProductDetailFragment : Fragment(), ProductsAdapter.OnItemClick {
         }
 
         binding.btnAddCart.setOnClickListener {
-            showCustomToast(getString(R.string.product_added_cart))
+            requireContext().showCustomToast(
+                getString(R.string.product_added_cart),
+                requireActivity(),
+                layoutInflater
+            )
         }
-    }
-
-    private fun showCustomToast(text: String) {
-        val layout = layoutInflater.inflate(
-            R.layout.custom_toast,
-            activity?.findViewById(R.id.custom_toast_layout_id)
-        )
-        layout.findViewById<TextView>(R.id.tv_custom_toast).text = text
-        val toast = Toast(requireContext())
-        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0)
-        toast.duration = Toast.LENGTH_SHORT
-        toast.view = layout
-        toast.show()
     }
 
     private fun initAdapter() {
@@ -84,46 +75,19 @@ class ProductDetailFragment : Fragment(), ProductsAdapter.OnItemClick {
 
     private fun fillList(): List<Products> {
         val data = mutableListOf<Products>()
-        data.add(
-            Products(
-                R.drawable.cap_1,
-                "Adidas",
-                "San Francisco Baseball",
-                "3800 сом"
+        for (i in 0..10) {
+            data.add(
+                Products(
+                    R.drawable.cap_1,
+                    "Adidas",
+                    "San Francisco Baseball",
+                    2500,
+                    null,
+                    null,
+                    null
+                )
             )
-        )
-        data.add(
-            Products(
-                R.drawable.cap_2,
-                "Adidas",
-                "San Francisco Baseball",
-                "3800 сом"
-            )
-        )
-        data.add(
-            Products(
-                R.drawable.cap_3,
-                "Adidas",
-                "San Francisco Baseball",
-                "3800 сом"
-            )
-        )
-        data.add(
-            Products(
-                R.drawable.cap_4,
-                "Adidas",
-                "San Francisco Baseball",
-                "3800 сом"
-            )
-        )
-        data.add(
-            Products(
-                R.drawable.cap_4,
-                "Adidas",
-                "San Francisco Baseball",
-                "3800 сом"
-            )
-        )
+        }
         return data
     }
 

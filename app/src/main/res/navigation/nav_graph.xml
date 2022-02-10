@@ -73,5 +73,10 @@
         android:name="kg.geektech.capstore.ui.fragments.my_order_detail.MyOrderDetailFragment"
         android:label="fragment_my_order_detail"
         tools:layout="@layout/fragment_my_order_detail" />
+    <dialog
+        android:id="@+id/cartShopFragment"
+        android:name="kg.geektech.capstore.ui.fragments.cart_shop.CartShopFragment"
+        android:label="fragment_cart_shop"
+        tools:layout="@layout/fragment_cart_shop" />
 
 </navigation>

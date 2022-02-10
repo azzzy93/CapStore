@@ -24,4 +24,6 @@
     <color name="grey_text_price_old">#828282</color>
     <color name="white_back_banner">#F4F4F4</color>
     <color name="white_back_detail">#F3F3F3</color>
+    <color name="blue_cart_count">#223263</color>
+    <color name="blue_cart_count_button">#EBF0FF</color>
 </resources>

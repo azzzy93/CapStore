@@ -8,7 +8,7 @@
         tools:ignore="MenuTitle" />
 
     <item
-        android:id="@+id/cartFragment"
+        android:id="@+id/cartShopFragment"
         android:icon="@drawable/cart_bottom_nav"
         tools:ignore="MenuTitle" />
 

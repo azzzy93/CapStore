@@ -69,4 +69,11 @@
     <string name="departure_date">Дата отправки:</string>
     <string name="product_added_cart">Товар добавлен в корзину</string>
     <string name="profile_changed">Вы изменили данные</string>
+    <string name="cart">Корзина</string>
+    <string name="sum">Сумма</string>
+    <string name="delivery">Доставка</string>
+    <string name="buy">Купить</string>
+    <string name="item_removed_from_cart">Товар удален с корзины</string>
+    <string name="custom_alert_dialog_text">Ваш заказ принят. Ожидайте, очень скоро с Вами свяжутся.</string>
+    <string name="go_home">На главную</string>
 </resources>

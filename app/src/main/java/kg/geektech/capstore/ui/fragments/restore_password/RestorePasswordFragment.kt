@@ -1,15 +1,13 @@
 package kg.geektech.capstore.ui.fragments.restore_password
 
 import android.os.Bundle
-import android.view.Gravity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import android.widget.Toast
 import kg.geektech.capstore.R
 import kg.geektech.capstore.databinding.FragmentRestorePasswordBinding
+import kg.geektech.capstore.extensions.showCustomToast
 
 class RestorePasswordFragment : Fragment() {
 
@@ -60,22 +58,12 @@ class RestorePasswordFragment : Fragment() {
             val newPassword2 = binding.etConfirmNewPassword.text.toString()
             if (newPassword.isNotBlank() && newPassword2.isNotBlank()) {
                 if (newPassword == newPassword2) {
-                    showCustomToast(getString(R.string.you_update_password))
+                    requireContext().showCustomToast(
+                        getString(R.string.you_update_password),
+                        requireActivity(), layoutInflater
+                    )
                 }
             }
         }
-    }
-
-    private fun showCustomToast(text: String) {
-        val layout = layoutInflater.inflate(
-            R.layout.custom_toast,
-            activity?.findViewById(R.id.custom_toast_layout_id)
-        )
-        layout.findViewById<TextView>(R.id.tv_custom_toast).text = text
-        val toast = Toast(requireContext())
-        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0)
-        toast.duration = Toast.LENGTH_SHORT
-        toast.view = layout
-        toast.show()
     }
 }

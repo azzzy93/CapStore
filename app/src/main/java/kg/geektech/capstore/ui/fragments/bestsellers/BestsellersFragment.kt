@@ -53,62 +53,17 @@ class BestsellersFragment : Fragment(), ProductsAdapter.OnItemClick {
 
     private fun fillList(): List<Products> {
         val data = mutableListOf<Products>()
-        data.add(
-            Products(
+        for (i in 0..10) {
+            data.add(Products(
                 R.drawable.cap_1,
                 "Adidas",
                 "San Francisco Baseball",
-                "3800 сом"
-            )
-        )
-        data.add(
-            Products(
-                R.drawable.cap_2,
-                "Adidas",
-                "San Francisco Baseball",
-                "3800 сом"
-            )
-        )
-        data.add(
-            Products(
-                R.drawable.cap_3,
-                "Adidas",
-                "San Francisco Baseball",
-                "3800 сом"
-            )
-        )
-        data.add(
-            Products(
-                R.drawable.cap_4,
-                "Adidas",
-                "San Francisco Baseball",
-                "3800 сом"
-            )
-        )
-        data.add(
-            Products(
-                R.drawable.cap_3,
-                "Adidas",
-                "San Francisco Baseball",
-                "3800 сом"
-            )
-        )
-        data.add(
-            Products(
-                R.drawable.cap_4,
-                "Adidas",
-                "San Francisco Baseball",
-                "3800 сом"
-            )
-        )
-        data.add(
-            Products(
-                R.drawable.cap_1,
-                "Adidas",
-                "San Francisco Baseball",
-                "3800 сом"
-            )
-        )
+                2500,
+                null,
+                null,
+                null
+            ))
+        }
         return data
     }
 

@@ -4,6 +4,8 @@ data class Products(
     var img: Int? = null,
     var brand: String? = null,
     var model: String? = null,
-    var price: String? = null,
-    var priceOld: String? = null,
+    var price: Int? = null,
+    var priceOld: Int? = null,
+    var count: Int? = null,
+    var size: String? = null
 )
