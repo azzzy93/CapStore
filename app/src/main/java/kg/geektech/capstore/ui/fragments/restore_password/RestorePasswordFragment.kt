@@ -44,12 +44,12 @@ class RestorePasswordFragment : Fragment() {
         }
 
         binding.btnRestorePassword1.setOnClickListener {
-            if (binding.etEnter6Num.text.toString().isNotBlank() &&
-                binding.etEnter6Num.text.toString().length == 6
-            ) {
+            val numbers = binding.etEnter6Num.code
+            if (numbers.isNotBlank() && numbers.length == 6) {
                 binding.group1.visibility = View.GONE
                 binding.group2.visibility = View.GONE
                 binding.group3.visibility = View.VISIBLE
+
             }
         }
 

@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingHorizontal="16dp"
+    android:paddingHorizontal="21dp"
     tools:context=".ui.fragments.cart_shop.CartShopFragment">
 
     <View
         android:layout_width="44dp"
         android:layout_height="4dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/back_for_cart_top_line"
+        android:background="@drawable/ic_top_line_for_cart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -45,10 +45,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@id/tv_cart"
-        tools:listitem="@layout/list_of_cart_shop" />
+        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/list_of_cart_shop"
+        tools:orientation="horizontal" />
 
     <View
         android:id="@+id/view_line"
@@ -61,63 +61,46 @@
 
     <TextView
         android:id="@+id/tv_sum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/TextCartSum"
         android:layout_marginTop="10dp"
-        android:fontFamily="@font/sf_ui_text_bold"
         android:text="@string/sum"
-        android:textColor="@color/black_text"
-        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@id/view_line"
         app:layout_constraintTop_toBottomOf="@id/view_line" />
 
     <TextView
         android:id="@+id/tv_sum_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/sf_ui_text_bold"
-        android:textColor="@color/black_text"
-        android:textSize="14sp"
+        style="@style/TextCartSum"
         app:layout_constraintEnd_toEndOf="@id/view_line"
         app:layout_constraintTop_toTopOf="@id/tv_sum"
         tools:text="2750 сом" />
 
     <TextView
         android:id="@+id/tv_delivery"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/TextCartSum"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/sf_ui_text_regular"
         android:text="@string/delivery"
-        android:textColor="@color/black_text"
-        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@id/view_line"
         app:layout_constraintTop_toBottomOf="@id/tv_sum" />
 
     <TextView
         android:id="@+id/tv_delivery_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/TextCartSum"
         android:fontFamily="@font/sf_ui_text_regular"
-        android:textColor="@color/black_text"
-        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@id/view_line"
         app:layout_constraintTop_toTopOf="@id/tv_delivery"
         tools:text="250 сом" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_buy"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/btn_height_60"
-        android:layout_marginHorizontal="10dp"
+        style="@style/YellowBtnStyle"
+        android:layout_marginHorizontal="8dp"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/yellow"
         android:text="@string/buy"
-        android:textAllCaps="false"
-        app:cornerRadius="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_delivery" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

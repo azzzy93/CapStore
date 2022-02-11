@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
     <item>
         <shape
             android:innerRadius="0dp"
@@ -9,4 +10,5 @@
             <solid android:color="@color/black_text" />
         </shape>
     </item>
+
 </layer-list>

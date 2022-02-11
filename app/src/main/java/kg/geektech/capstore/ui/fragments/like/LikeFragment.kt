@@ -54,13 +54,10 @@ class LikeFragment : Fragment(), ProductsAdapter.OnItemClick {
         val data = mutableListOf<Products>()
         for (i in 0..10) {
             data.add(Products(
-                R.drawable.cap_1,
-                "Adidas",
-                "San Francisco Baseball",
-                2500,
-                null,
-                null,
-                null
+                img = R.drawable.img_cap,
+                brand = "Adidas",
+                model = "San Francisco Baseball",
+                price = 2500
             ))
         }
         return data

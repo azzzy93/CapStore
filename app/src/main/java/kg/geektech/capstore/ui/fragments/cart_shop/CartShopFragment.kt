@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.fragment.NavHostFragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.button.MaterialButton
 import kg.geektech.capstore.R
@@ -79,6 +80,8 @@ class CartShopFragment : BottomSheetDialogFragment() {
     private fun initAdapter() {
         adapter = CartShopAdapter(fillList())
         binding.rvProducts.adapter = adapter
+        binding.rvProducts.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         adapter.setOnItemClick(object : CartShopAdapter.OnItemClick {
             override fun onItemClick(sum: String?, btn: String?) {
                 if (btn == "trash") {
@@ -99,13 +102,12 @@ class CartShopFragment : BottomSheetDialogFragment() {
         for (i in 0..10) {
             data.add(
                 Products(
-                    R.drawable.cap_1,
-                    "Adidas",
-                    "Golden State Warriors Icon 59FIFTY Fitted Cap",
-                    2500,
-                    null,
-                    0,
-                    "S"
+                    img = R.drawable.img_cap,
+                    brand = "Adidas",
+                    model = "Golden State Warriors Icon 59FIFTY Fitted Cap",
+                    price = 2500,
+                    count = 0,
+                    size = "S"
                 )
             )
         }

@@ -1,12 +1,9 @@
 package kg.geektech.capstore.ui.fragments.product_detail
 
 import android.os.Bundle
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -78,13 +75,10 @@ class ProductDetailFragment : Fragment(), ProductsAdapter.OnItemClick {
         for (i in 0..10) {
             data.add(
                 Products(
-                    R.drawable.cap_1,
-                    "Adidas",
-                    "San Francisco Baseball",
-                    2500,
-                    null,
-                    null,
-                    null
+                    img = R.drawable.img_cap,
+                    brand = "Adidas",
+                    model = "San Francisco Baseball",
+                    price = 2500
                 )
             )
         }
@@ -93,10 +87,10 @@ class ProductDetailFragment : Fragment(), ProductsAdapter.OnItemClick {
 
     private fun fillListImg(): List<Int> {
         return mutableListOf(
-            R.drawable.img_banner_2,
-            R.drawable.img_banner_1_right_2,
-            R.drawable.img_banner_2,
-            R.drawable.img_banner_1_right_2
+            R.drawable.banner_2_cap,
+            R.drawable.banner_1_right_cap,
+            R.drawable.banner_2_cap,
+            R.drawable.banner_1_right_cap
         )
     }
 

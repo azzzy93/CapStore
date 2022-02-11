@@ -10,7 +10,7 @@
         android:id="@+id/container_for_image"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:background="@drawable/rounded_for_image"
+        android:background="@drawable/back_rounded_for_image_product"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -24,7 +24,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription"
-            tools:src="@drawable/cap_1" />
+            tools:src="@drawable/img_cap" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -51,14 +51,14 @@
             android:id="@+id/iv_like"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/like_bottom_nav"
+            android:src="@drawable/ic_like_def"
             tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/iv_like_selected"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/like_selected"
+            android:src="@drawable/ic_like_selected"
             android:visibility="gone"
             tools:ignore="ContentDescription" />
 

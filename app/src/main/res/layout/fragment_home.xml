@@ -5,23 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:paddingHorizontal="15dp"
+    android:paddingHorizontal="21dp"
     tools:context=".ui.fragments.home.HomeFragment">
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/et_search"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/btn_height_60"
+        style="@style/TextEditTextProfile"
         android:layout_marginTop="60dp"
-        android:background="@drawable/rounded_edit_text"
-        android:drawableStart="@drawable/search_icon"
-        android:drawableEnd="@drawable/settings_icon"
+        android:background="@drawable/back_search_edit_text"
+        android:drawableStart="@drawable/ic_search_edit_text"
+        android:drawableEnd="@drawable/ic_settings_edit_text"
         android:drawablePadding="18dp"
-        android:fontFamily="@font/sf_ui_text_regular"
         android:hint="@string/search"
         android:padding="18dp"
-        android:textColor="@color/black_text"
         app:layout_constraintBottom_toTopOf="@id/scroll_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
@@ -46,7 +45,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="190dp"
                     android:layout_marginTop="20dp"
-                    android:background="@drawable/rounded_image_banner"
+                    android:background="@drawable/back_for_banner_image_1"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,7 +54,7 @@
                     android:layout_height="61dp"
                     android:layout_marginStart="17dp"
                     android:layout_marginTop="6dp"
-                    android:src="@drawable/img_banner_1_left"
+                    android:src="@drawable/banner_1_left_blue_spot"
                     app:layout_constraintStart_toStartOf="@id/view_banner_1"
                     app:layout_constraintTop_toTopOf="@id/view_banner_1"
                     tools:ignore="ContentDescription" />
@@ -66,7 +65,7 @@
                     android:layout_height="92dp"
                     android:layout_marginStart="26dp"
                     android:layout_marginBottom="20dp"
-                    android:src="@drawable/img_banner_1_bottom"
+                    android:src="@drawable/banner_1_bottom_green_spot"
                     app:layout_constraintBottom_toBottomOf="@id/view_banner_1"
                     app:layout_constraintStart_toStartOf="@id/view_banner_1"
                     tools:ignore="ContentDescription" />
@@ -76,7 +75,7 @@
                     android:layout_width="196dp"
                     android:layout_height="165dp"
                     android:layout_marginTop="-10dp"
-                    android:src="@drawable/img_banner_1_right"
+                    android:src="@drawable/banner_1_right_yellow_spot"
                     app:layout_constraintEnd_toEndOf="@id/view_banner_1"
                     app:layout_constraintTop_toTopOf="@id/view_banner_1"
                     tools:ignore="ContentDescription" />
@@ -86,7 +85,7 @@
                     android:layout_height="115dp"
                     android:layout_marginTop="24dp"
                     android:layout_marginEnd="6dp"
-                    android:src="@drawable/img_banner_1_right_2"
+                    android:src="@drawable/banner_1_right_cap"
                     app:layout_constraintEnd_toEndOf="@id/iv_banner_1_right"
                     app:layout_constraintTop_toTopOf="@id/iv_banner_1_right"
                     tools:ignore="ContentDescription" />
@@ -100,7 +99,6 @@
                     android:layout_marginEnd="-18dp"
                     android:fontFamily="@font/montserrat_bold"
                     android:includeFontPadding="false"
-                    android:lines="1"
                     android:text="@string/new_era"
                     android:textAllCaps="true"
                     android:textColor="@color/black_text"
@@ -122,124 +120,18 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/TextSmallTitle"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/sf_ui_display_bold"
-                android:text="@string/popular_brands"
-                android:textColor="@color/black_text"
-                android:textSize="20sp" />
+                android:text="@string/popular_brands" />
 
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_brands"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:id="@+id/container_for_popular"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/iv_new_era_round"
-                        android:layout_width="match_parent"
-                        android:layout_height="75dp"
-                        android:src="@drawable/new_era_round"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/sf_ui_text_bold"
-                        android:gravity="center"
-                        android:text="@string/new_era"
-                        android:textColor="@color/black_text"
-                        android:textSize="12sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/container_for_popular_2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/iv_adidas_round"
-                        android:layout_width="match_parent"
-                        android:layout_height="75dp"
-                        android:src="@drawable/adidas_round"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/sf_ui_text_bold"
-                        android:gravity="center"
-                        android:text="@string/adidas"
-                        android:textColor="@color/black_text"
-                        android:textSize="12sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/iv_nike_round"
-                        android:layout_width="match_parent"
-                        android:layout_height="75dp"
-                        android:src="@drawable/nike_round"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/sf_ui_text_bold"
-                        android:gravity="center"
-                        android:text="@string/nike"
-                        android:textColor="@color/black_text"
-                        android:textSize="12sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/iv_vans_round"
-                        android:layout_width="match_parent"
-                        android:layout_height="75dp"
-                        android:src="@drawable/vans_round"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/sf_ui_text_bold"
-                        android:gravity="center"
-                        android:text="@string/vans"
-                        android:textColor="@color/black_text"
-                        android:textSize="12sp" />
-
-                </LinearLayout>
-
-
-            </LinearLayout>
+                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_brands_for_home"
+                tools:orientation="horizontal" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -247,17 +139,13 @@
                 android:layout_marginTop="28dp">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    style="@style/TextSmallTitle"
                     android:layout_weight="1"
-                    android:fontFamily="@font/sf_ui_display_bold"
-                    android:text="@string/bestsellers"
-                    android:textColor="@color/black_text"
-                    android:textSize="20sp" />
+                    android:text="@string/bestsellers" />
 
                 <TextView
                     android:id="@+id/tv_watch_all_best"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/sf_ui_display_bold"
@@ -273,7 +161,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                tools:listitem="@layout/list_of_bestsellers" />
+                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_of_bestsellers"
+                tools:orientation="horizontal" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -285,13 +175,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="190dp"
                     android:layout_marginBottom="20dp"
-                    android:background="@drawable/rounded_image_banner_2"
+                    android:background="@drawable/back_for_banner_image_2"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/tv_banner_2_1"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="7dp"
                     android:layout_marginTop="12dp"
@@ -315,13 +205,15 @@
                     app:layout_constraintTop_toBottomOf="@id/tv_banner_2_1" />
 
                 <ImageView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="156dp"
                     android:layout_marginStart="13dp"
                     android:layout_marginBottom="-14dp"
                     android:adjustViewBounds="false"
-                    android:src="@drawable/img_banner_2"
+                    android:src="@drawable/banner_2_cap"
                     app:layout_constraintBottom_toBottomOf="@id/view_banner_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     tools:ignore="ContentDescription" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -332,17 +224,13 @@
                 android:layout_marginTop="28dp">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    style="@style/TextSmallTitle"
                     android:layout_weight="1"
-                    android:fontFamily="@font/sf_ui_display_bold"
-                    android:text="@string/promotions"
-                    android:textColor="@color/black_text"
-                    android:textSize="20sp" />
+                    android:text="@string/promotions" />
 
                 <TextView
                     android:id="@+id/tv_watch_all_prom"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/sf_ui_display_bold"
@@ -358,7 +246,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                tools:listitem="@layout/list_of_bestsellers" />
+                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_of_bestsellers"
+                tools:orientation="horizontal" />
 
         </LinearLayout>
 

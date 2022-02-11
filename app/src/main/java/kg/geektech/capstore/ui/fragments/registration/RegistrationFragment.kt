@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
 import androidx.navigation.fragment.NavHostFragment
 import kg.geektech.capstore.R
@@ -42,14 +43,13 @@ class RegistrationFragment : Fragment() {
             val number = binding.etNumPhone.text.toString().trim()
             val password = binding.etPassword.text.toString().trim()
             val passwordConfirm = binding.etPasswordConfirm.text.toString().trim()
+
             if (name.isNotEmpty() && number.isNotEmpty() &&
                 password.isNotEmpty() && passwordConfirm.isNotEmpty()
             ) {
-                binding.group1.visibility = View.GONE
-                binding.group2.visibility = View.VISIBLE
+                ifFilled(true)
             } else {
-                binding.group2.visibility = View.GONE
-                binding.group1.visibility = View.VISIBLE
+                ifFilled(false)
             }
         }
 
@@ -61,11 +61,9 @@ class RegistrationFragment : Fragment() {
             if (name.isNotEmpty() && number.isNotEmpty() &&
                 password.isNotEmpty() && passwordConfirm.isNotEmpty()
             ) {
-                binding.group1.visibility = View.GONE
-                binding.group2.visibility = View.VISIBLE
+                ifFilled(true)
             } else {
-                binding.group2.visibility = View.GONE
-                binding.group1.visibility = View.VISIBLE
+                ifFilled(false)
             }
         }
 
@@ -77,11 +75,9 @@ class RegistrationFragment : Fragment() {
             if (name.isNotEmpty() && number.isNotEmpty() &&
                 password.isNotEmpty() && passwordConfirm.isNotEmpty()
             ) {
-                binding.group1.visibility = View.GONE
-                binding.group2.visibility = View.VISIBLE
+                ifFilled(true)
             } else {
-                binding.group2.visibility = View.GONE
-                binding.group1.visibility = View.VISIBLE
+                ifFilled(false)
             }
         }
 
@@ -93,12 +89,32 @@ class RegistrationFragment : Fragment() {
             if (name.isNotEmpty() && number.isNotEmpty() &&
                 password.isNotEmpty() && passwordConfirm.isNotEmpty()
             ) {
-                binding.group1.visibility = View.GONE
-                binding.group2.visibility = View.VISIBLE
+                ifFilled(true)
             } else {
-                binding.group2.visibility = View.GONE
-                binding.group1.visibility = View.VISIBLE
+                ifFilled(false)
             }
+        }
+    }
+
+    private fun ifFilled(b: Boolean) {
+        if (b) {
+            binding.btnReg.isEnabled = true
+            binding.leftLine.isVisible = false
+            binding.rightLine.isVisible = false
+            binding.tvOr.isVisible = false
+            binding.ivFacebook.isVisible = false
+            binding.ivGoogle.isVisible = false
+            binding.tvHaveAcc.isVisible = true
+            binding.tvSignIn.isVisible = true
+        } else {
+            binding.btnReg.isEnabled = false
+            binding.leftLine.isVisible = true
+            binding.rightLine.isVisible = true
+            binding.tvOr.isVisible = true
+            binding.ivFacebook.isVisible = true
+            binding.ivGoogle.isVisible = true
+            binding.tvHaveAcc.isVisible = false
+            binding.tvSignIn.isVisible = false
         }
     }
 

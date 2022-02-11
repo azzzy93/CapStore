@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import kg.geektech.capstore.R
 import kg.geektech.capstore.databinding.FragmentBestsellersBinding
 import kg.geektech.capstore.models.Products
@@ -55,13 +54,10 @@ class BestsellersFragment : Fragment(), ProductsAdapter.OnItemClick {
         val data = mutableListOf<Products>()
         for (i in 0..10) {
             data.add(Products(
-                R.drawable.cap_1,
-                "Adidas",
-                "San Francisco Baseball",
-                2500,
-                null,
-                null,
-                null
+                img = R.drawable.img_cap,
+                brand = "Adidas",
+                model = "San Francisco Baseball",
+                price = 2500
             ))
         }
         return data

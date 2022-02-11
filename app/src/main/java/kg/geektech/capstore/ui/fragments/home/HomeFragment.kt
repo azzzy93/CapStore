@@ -12,11 +12,12 @@ import kg.geektech.capstore.databinding.FragmentHomeBinding
 import kg.geektech.capstore.models.Products
 import kg.geektech.capstore.ui.adapters.ProductsAdapter
 
-class HomeFragment : Fragment(), ProductsAdapter.OnItemClick {
+class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
     private lateinit var bestAdapter: ProductsAdapter
     private lateinit var promAdapter: ProductsAdapter
+    private lateinit var brandsAdapter: BrandsAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,37 +41,65 @@ class HomeFragment : Fragment(), ProductsAdapter.OnItemClick {
         binding.tvWatchAllProm.setOnClickListener {
             navigateFragment(R.id.bestsellersFragment)
         }
-        binding.containerForPopular.setOnClickListener {
-            navigateFragment(R.id.bestsellersFragment)
-        }
+        bestAdapter.setOnItemClick(object : ProductsAdapter.OnItemClick {
+            override fun onClick(product: Products) {
+                navigateFragment(R.id.productDetailFragment)
+            }
+        })
+        promAdapter.setOnItemClick(object : ProductsAdapter.OnItemClick {
+            override fun onClick(product: Products) {
+                navigateFragment(R.id.productDetailFragment)
+            }
+        })
+        brandsAdapter.setOnItemClick(object : BrandsAdapter.OnItemClick {
+            override fun onItemClick(product: Products) {
+                navigateFragment(R.id.productDetailFragment)
+            }
+
+        })
     }
 
     private fun initAdapter() {
         bestAdapter = ProductsAdapter(fillListBest())
-        bestAdapter.setOnItemClick(this)
         binding.rvBestsellers.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.rvBestsellers.adapter = bestAdapter
 
         promAdapter = ProductsAdapter(fillListProm())
-        promAdapter.setOnItemClick(this)
         binding.rvPromotions.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.rvPromotions.adapter = promAdapter
+
+        brandsAdapter = BrandsAdapter(fillListBrands())
+        binding.rvBrands.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        binding.rvBrands.adapter = brandsAdapter
+    }
+
+    private fun fillListBrands(): List<Products> {
+        val data = mutableListOf<Products>()
+        for (i in 0..10) {
+            data.add(
+                Products(
+                    brand = "Adidas",
+                    brandImg = R.drawable.img_adidas_round_for_home,
+                )
+            )
+        }
+        return data
     }
 
     private fun fillListBest(): List<Products> {
         val data = mutableListOf<Products>()
         for (i in 0..10) {
-            data.add(Products(
-                R.drawable.cap_1,
-                "Adidas",
-                "San Francisco Baseball",
-                2500,
-                null,
-                null,
-                null
-            ))
+            data.add(
+                Products(
+                    img = R.drawable.img_cap,
+                    brand = "Adidas",
+                    model = "San Francisco Baseball",
+                    price = 2500,
+                )
+            )
         }
         return data
     }
@@ -78,15 +107,15 @@ class HomeFragment : Fragment(), ProductsAdapter.OnItemClick {
     private fun fillListProm(): List<Products> {
         val data = mutableListOf<Products>()
         for (i in 0..10) {
-            data.add(Products(
-                R.drawable.cap_1,
-                "Adidas",
-                "San Francisco Baseball",
-                2500,
-                3500,
-                null,
-                null
-            ))
+            data.add(
+                Products(
+                    img = R.drawable.img_cap,
+                    brand = "Adidas",
+                    model = "San Francisco Baseball",
+                    price = 2500,
+                    priceOld = 3500,
+                )
+            )
         }
         return data
     }
@@ -96,9 +125,5 @@ class HomeFragment : Fragment(), ProductsAdapter.OnItemClick {
             activity?.supportFragmentManager?.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         val navController = navHostFragment.navController
         navController.navigate(resId)
-    }
-
-    override fun onClick(product: Products) {
-        navigateFragment(R.id.productDetailFragment)
     }
 }

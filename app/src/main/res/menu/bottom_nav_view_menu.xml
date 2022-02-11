@@ -4,22 +4,22 @@
 
     <item
         android:id="@+id/homeFragment"
-        android:icon="@drawable/home_bottom_nav"
+        android:icon="@drawable/ic_home"
         tools:ignore="MenuTitle" />
 
     <item
         android:id="@+id/cartShopFragment"
-        android:icon="@drawable/cart_bottom_nav"
+        android:icon="@drawable/ic_cart"
         tools:ignore="MenuTitle" />
 
     <item
         android:id="@+id/likeFragment"
-        android:icon="@drawable/like_bottom_nav"
+        android:icon="@drawable/ic_like_def"
         tools:ignore="MenuTitle" />
 
     <item
         android:id="@+id/userFragment"
-        android:icon="@drawable/user_bottom_nav"
+        android:icon="@drawable/ic_user"
         tools:ignore="MenuTitle" />
 
 </menu>

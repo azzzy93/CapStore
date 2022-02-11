@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginHorizontal="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container_for_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_for_image"
+        android:background="@drawable/back_rounded_for_image_product"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -25,21 +25,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription"
-            tools:src="@drawable/cap_1" />
+            tools:src="@drawable/img_cap" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/tv_brand"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        style="@style/TextBrandProductsRv"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="51dp"
-        android:ellipsize="end"
-        android:fontFamily="@font/sf_ui_text_heavy"
-        android:maxLines="1"
-        android:textColor="@color/black"
-        android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@id/iv_trash"
         app:layout_constraintStart_toEndOf="@id/container_for_image"
         app:layout_constraintTop_toTopOf="@id/container_for_image"
@@ -47,13 +41,7 @@
 
     <TextView
         android:id="@+id/tv_model"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:ellipsize="end"
-        android:fontFamily="@font/sf_ui_text_regular"
-        android:maxLines="2"
-        android:textColor="@color/black"
-        android:textSize="12sp"
+        style="@style/TextModelProductsRv"
         app:layout_constraintEnd_toEndOf="@id/tv_brand"
         app:layout_constraintStart_toStartOf="@id/tv_brand"
         app:layout_constraintTop_toBottomOf="@id/tv_brand"
@@ -64,19 +52,15 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginTop="5dp"
-        android:src="@drawable/trash"
+        android:src="@drawable/ic_trash_cart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tv_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/TextPriceProductsRv"
         android:layout_marginTop="13dp"
-        android:fontFamily="@font/sf_ui_text_bold"
-        android:textColor="@color/yellow"
-        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@id/tv_brand"
         app:layout_constraintTop_toBottomOf="@id/tv_model"
         tools:text="2500 сом" />
@@ -135,13 +119,13 @@
         android:layout_width="31dp"
         android:layout_height="31dp"
         android:layout_marginTop="5dp"
-        android:background="@drawable/circle_background_2"
+        android:background="@drawable/back_circle_for_size_product"
         android:fontFamily="@font/sf_ui_display_bold"
         android:gravity="center"
         android:textColor="@color/black_text"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@id/tv_price"
         app:layout_constraintTop_toBottomOf="@id/tv_price"
-        tools:text="@string/s" />
+        tools:text="S" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

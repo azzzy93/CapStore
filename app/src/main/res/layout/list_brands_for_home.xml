@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="8dp"
+    tools:ignore="UseCompoundDrawables">
+
+    <ImageView
+        android:id="@+id/iv_brand"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/img_adidas_round_for_home" />
+
+    <TextView
+        android:id="@+id/tv_brand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/sf_ui_text_bold"
+        android:gravity="center"
+        android:textColor="@color/black_text"
+        android:textSize="12sp"
+        tools:text="@string/adidas" />
+
+</LinearLayout>
