@@ -1,4 +1,4 @@
-package kg.geektech.capstore.extensions
+package kg.geektech.capstore.core.extensions
 
 import android.widget.ImageView
 import com.bumptech.glide.Glide

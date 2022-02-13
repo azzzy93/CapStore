@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kg.geektech.capstore.databinding.ListBrandsForHomeBinding
-import kg.geektech.capstore.models.Products
+import kg.geektech.capstore.data.models.Products
 
 class BrandsAdapter(private val list: List<Products>) :
     RecyclerView.Adapter<BrandsAdapter.BrandsViewHolder>() {

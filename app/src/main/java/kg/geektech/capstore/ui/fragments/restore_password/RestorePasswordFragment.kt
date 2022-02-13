@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import kg.geektech.capstore.R
 import kg.geektech.capstore.databinding.FragmentRestorePasswordBinding
-import kg.geektech.capstore.extensions.showCustomToast
+import kg.geektech.capstore.core.extensions.showCustomToast
 
 class RestorePasswordFragment : Fragment() {
 

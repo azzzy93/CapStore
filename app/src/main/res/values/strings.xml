@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">CapStore</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="cap_store">Магазин кепок</string>
     <string name="sign_in">Войти</string>
@@ -15,7 +14,6 @@
     <string name="forgot_password">Забыли пароль?</string>
     <string name="restore">Восстановить</string>
     <string name="restore_password">Восстановить пароль</string>
-    <string name="_996_788_999_555">+ 996 788 999 555</string>
     <string name="enter_code_sms">Введите номер, указанный при регистрации. Вам будет отправлен код подтверждения по смс.</string>
     <string name="send">Отправить</string>
     <string name="enter_6_num">Введите 6 значный код, отправленный на номер</string>
@@ -24,42 +22,24 @@
     <string name="you_update_password">Вы обновили пароль</string>
     <string name="search">Поиск</string>
     <string name="popular_brands">Популярные Бренды</string>
-    <string name="new_era">New Era</string>
-    <string name="adidas">Adidas</string>
-    <string name="nike">Nike</string>
-    <string name="vans">Vans</string>
     <string name="bestsellers">Бестселлеры</string>
     <string name="watch_all">Смотреть все</string>
     <string name="promotions">Акции</string>
     <string name="favorites">Избранные</string>
-    <string name="collection_2021">Самая яркая коллекция 2021</string>
-    <string name="supreme_amp_new_era"><![CDATA[SUPREME & NEW ERA]]></string>
-    <string name="collaboration">collaboration</string>
-    <string name="desc_model">Golden State Warriors \nIcon 59FIFTY Fitted Cap</string>
-    <string name="_2500">2500 сом</string>
     <string name="sizes">Размеры</string>
-    <string name="desc">Кепка Golden State Warriors Icon 59FIFTY Fitted Cap имеет вышитый логотип Warriors на передних панелях, а также надпись World Champs с дополнительными командными нашивками и вышивкой по всей остальной части короны. Дополнительные детали включают цветной логотип NBA команды сзади и серый нижний слой.</string>
     <string name="similar_prod">Похожие товары</string>
     <string name="add_to_shopping_cart">Добавить в Корзину</string>
     <string name="my_account">Мой аккаунт</string>
     <string name="profile">Профиль</string>
     <string name="my_orders">Мои заказы</string>
     <string name="address">Адрес</string>
-    <string name="azizbek_kudaibergenov">Azizbek Kudaibergenov</string>
-    <string name="azizbek3993_gmail_com">azizbek3993@gmail.com</string>
-    <string name="_996705717148">+996705717148</string>
-    <string name="address_def">г.Бишкек, ж/м Кок-Джар</string>
     <string name="edit_profile">Редактировать профиль</string>
     <string name="enter_name">Введите имя</string>
     <string name="enter_email">Введите почту</string>
     <string name="enter_phone_num">Введите номер телефона</string>
     <string name="enter_address">Введите адрес</string>
-    <string name="apply">Применить</string>
-    <string name="_89475934">89475934</string>
     <string name="date">Дата:</string>
-    <string name="_19_09_2019">19.09.2019</string>
     <string name="status">Статус:</string>
-    <string name="delivered">Доставлен</string>
     <string name="orders_detail">Детали заказа</string>
     <string name="date_order">Дата заказа:</string>
     <string name="departure_date">Дата отправки:</string>
@@ -72,4 +52,10 @@
     <string name="item_removed_from_cart">Товар удален с корзины</string>
     <string name="custom_alert_dialog_text">Ваш заказ принят. Ожидайте, очень скоро с Вами свяжутся.</string>
     <string name="go_home">На главную</string>
+    <string name="sort">Сортировка</string>
+    <string name="popular">Популярные</string>
+    <string name="new_">Новинки</string>
+    <string name="cheap_first">Сначала дешевые</string>
+    <string name="expensive_first">Сначала дорогие</string>
+    <string name="apply">Применить</string>
 </resources>

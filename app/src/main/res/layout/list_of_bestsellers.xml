@@ -30,11 +30,8 @@
 
     <TextView
         android:id="@+id/tv_brand"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/TextBrandProductsRv"
         android:layout_marginTop="10dp"
-        android:fontFamily="@font/sf_ui_text_bold"
-        android:textColor="@color/black_text"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@id/container_for_image"
         app:layout_constraintTop_toBottomOf="@id/container_for_image"
@@ -42,22 +39,22 @@
 
     <FrameLayout
         android:id="@+id/container_like"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="@id/container_for_image"
         app:layout_constraintTop_toTopOf="@id/tv_brand">
 
         <ImageView
             android:id="@+id/iv_like"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:src="@drawable/ic_like_def"
             tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/iv_like_selected"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:src="@drawable/ic_like_selected"
             android:visibility="gone"
             tools:ignore="ContentDescription" />
@@ -66,10 +63,7 @@
 
     <TextView
         android:id="@+id/tv_model"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/sf_ui_text_regular"
-        android:textColor="@color/black_text_30"
+        style="@style/TextModelProductsRv"
         android:textSize="11sp"
         app:layout_constraintStart_toStartOf="@id/container_for_image"
         app:layout_constraintTop_toBottomOf="@id/container_like"
@@ -77,9 +71,7 @@
 
     <TextView
         android:id="@+id/tv_price_old"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/sf_ui_text_bold"
+        style="@style/TextPriceProductsRv"
         android:paddingEnd="7dp"
         android:textColor="@color/grey_text_price_old"
         android:textSize="12sp"
@@ -92,12 +84,8 @@
 
     <TextView
         android:id="@+id/tv_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/TextPriceProductsRv"
         android:layout_marginTop="5dp"
-        android:fontFamily="@font/sf_ui_text_bold"
-        android:textColor="@color/yellow"
-        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/tv_price_old"
         app:layout_constraintTop_toBottomOf="@id/tv_model"

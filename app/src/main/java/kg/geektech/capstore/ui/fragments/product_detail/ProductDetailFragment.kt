@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.tabs.TabLayoutMediator
 import kg.geektech.capstore.R
 import kg.geektech.capstore.databinding.FragmentProductDetailBinding
-import kg.geektech.capstore.extensions.showCustomToast
-import kg.geektech.capstore.models.Products
+import kg.geektech.capstore.core.extensions.showCustomToast
+import kg.geektech.capstore.data.models.Products
 import kg.geektech.capstore.ui.adapters.ProductsAdapter
 
 class ProductDetailFragment : Fragment(), ProductsAdapter.OnItemClick {

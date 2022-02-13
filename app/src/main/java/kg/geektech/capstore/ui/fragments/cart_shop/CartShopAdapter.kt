@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kg.geektech.capstore.databinding.ListOfCartShopBinding
-import kg.geektech.capstore.models.Products
+import kg.geektech.capstore.data.models.Products
 
 class CartShopAdapter(private val list: ArrayList<Products>) :
     RecyclerView.Adapter<CartShopAdapter.MineViewHolder>() {

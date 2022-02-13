@@ -48,10 +48,11 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="45dp"
         android:fontFamily="@font/sf_ui_display_bold"
-        android:text="@string/azizbek_kudaibergenov"
+        android:text="azizbek_kudaibergenov"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/container_for_image"
-        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:ignore="HardcodedText" />
 
     <ImageView
         android:id="@+id/iv_email"
@@ -61,17 +62,18 @@
         android:src="@drawable/ic_yellow_message_for_profile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/container_for_image"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription,ImageContrastCheck" />
 
     <TextView
         android:id="@+id/tv_email"
         style="@style/TextEditTextProfile"
         android:layout_marginStart="25dp"
-        android:text="@string/azizbek3993_gmail_com"
+        android:text="azizbek3993_gmail_com"
         app:layout_constraintBottom_toBottomOf="@id/iv_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/iv_email"
-        app:layout_constraintTop_toTopOf="@id/iv_email" />
+        app:layout_constraintTop_toTopOf="@id/iv_email"
+        tools:ignore="HardcodedText" />
 
     <ImageView
         android:id="@+id/iv_phone_number"
@@ -81,17 +83,18 @@
         android:src="@drawable/ic_yellow_phone_for_profile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iv_email"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription,ImageContrastCheck" />
 
     <TextView
         android:id="@+id/tv_phone_number"
         style="@style/TextEditTextProfile"
         android:layout_marginStart="25dp"
-        android:text="@string/_996705717148"
+        android:text="+996 705 71 71 48"
         app:layout_constraintBottom_toBottomOf="@id/iv_phone_number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/iv_phone_number"
-        app:layout_constraintTop_toTopOf="@id/iv_phone_number" />
+        app:layout_constraintTop_toTopOf="@id/iv_phone_number"
+        tools:ignore="HardcodedText" />
 
     <ImageView
         android:id="@+id/iv_address"
@@ -101,17 +104,18 @@
         android:src="@drawable/ic_yellow_location_for_profile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iv_phone_number"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription,ImageContrastCheck" />
 
     <TextView
         android:id="@+id/tv_address"
         style="@style/TextEditTextProfile"
         android:layout_marginStart="25dp"
-        android:text="@string/address_def"
+        android:text="г.Бишкек, ул.Юнусалиева, 93"
         app:layout_constraintBottom_toBottomOf="@id/iv_address"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/iv_address"
-        app:layout_constraintTop_toTopOf="@id/iv_address" />
+        app:layout_constraintTop_toTopOf="@id/iv_address"
+        tools:ignore="HardcodedText" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_edit_profile"
@@ -121,6 +125,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_address" />
+        app:layout_constraintTop_toBottomOf="@id/iv_address"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

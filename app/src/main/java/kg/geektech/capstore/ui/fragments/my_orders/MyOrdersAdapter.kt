@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kg.geektech.capstore.databinding.ListMyOrdersBinding
-import kg.geektech.capstore.models.MyOrders
+import kg.geektech.capstore.data.models.MyOrders
 
 class MyOrdersAdapter(private var list: ArrayList<MyOrders>) :
     RecyclerView.Adapter<MyOrdersAdapter.OrderViewHolder>() {

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginVertical="15dp"
@@ -12,10 +13,11 @@
         style="@style/TextOrder"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/sf_ui_display_bold"
-        android:text="@string/_89475934"
+        android:text="89475934"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/tv_date_order"
@@ -29,9 +31,10 @@
         android:id="@+id/tv_date_order_value"
         style="@style/TextOrder"
         android:fontFamily="@font/sf_ui_display_bold"
-        android:text="@string/_19_09_2019"
+        android:text="19.09.2019"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_date_order" />
+        app:layout_constraintTop_toTopOf="@id/tv_date_order"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/tv_date_status"
@@ -47,8 +50,9 @@
         android:id="@+id/tv_date_status_value"
         style="@style/TextOrder"
         android:fontFamily="@font/sf_ui_display_bold"
-        android:text="@string/delivered"
+        android:text="Доставлено"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_date_status" />
+        app:layout_constraintTop_toTopOf="@id/tv_date_status"
+        tools:ignore="HardcodedText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

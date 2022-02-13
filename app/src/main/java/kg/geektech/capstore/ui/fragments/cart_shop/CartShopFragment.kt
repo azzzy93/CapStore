@@ -12,8 +12,8 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.button.MaterialButton
 import kg.geektech.capstore.R
 import kg.geektech.capstore.databinding.FragmentCartShopBinding
-import kg.geektech.capstore.extensions.showCustomToast
-import kg.geektech.capstore.models.Products
+import kg.geektech.capstore.core.extensions.showCustomToast
+import kg.geektech.capstore.data.models.Products
 
 class CartShopFragment : BottomSheetDialogFragment() {
 

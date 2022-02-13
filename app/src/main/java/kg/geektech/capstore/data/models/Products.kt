@@ -1,4 +1,4 @@
-package kg.geektech.capstore.models
+package kg.geektech.capstore.data.models
 
 data class Products(
     var img: Int? = null,

@@ -9,7 +9,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.GridLayoutManager
 import kg.geektech.capstore.R
 import kg.geektech.capstore.databinding.FragmentBestsellersBinding
-import kg.geektech.capstore.models.Products
+import kg.geektech.capstore.data.models.Products
 import kg.geektech.capstore.ui.adapters.ProductsAdapter
 
 class LikeFragment : Fragment(), ProductsAdapter.OnItemClick {

@@ -50,23 +50,26 @@
         android:id="@+id/tv_brand"
         style="@style/TextBrandProductsRv"
         android:layout_marginStart="12dp"
-        android:text="@string/new_era"
+        android:text="New Era"
         app:layout_constraintStart_toEndOf="@id/container_for_image"
-        app:layout_constraintTop_toTopOf="@id/container_for_image" />
+        app:layout_constraintTop_toTopOf="@id/container_for_image"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/tv_model"
         style="@style/TextModelProductsRv"
-        android:text="@string/desc_model"
+        android:text="Golden State Warriors Icon 59FIFTY Fitted Cap"
         app:layout_constraintStart_toStartOf="@id/tv_brand"
-        app:layout_constraintTop_toBottomOf="@id/tv_brand" />
+        app:layout_constraintTop_toBottomOf="@id/tv_brand"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/tv_price"
         style="@style/TextPriceProductsRv"
-        android:text="@string/_2500"
+        android:text="2500 сом"
         app:layout_constraintBottom_toBottomOf="@id/container_for_image"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container_for_order"
@@ -82,10 +85,11 @@
             style="@style/TextOrder"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/sf_ui_display_bold"
-            android:text="@string/_89475934"
+            android:text="89475934"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/tv_date_order"
@@ -99,9 +103,10 @@
             android:id="@+id/tv_date_order_value"
             style="@style/TextOrder"
             android:fontFamily="@font/sf_ui_display_bold"
-            android:text="@string/_19_09_2019"
+            android:text="19.09.2019"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/tv_date_order" />
+            app:layout_constraintTop_toTopOf="@id/tv_date_order"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/tv_date_departure"
@@ -115,9 +120,10 @@
             android:id="@+id/tv_date_departure_value"
             style="@style/TextOrder"
             android:fontFamily="@font/sf_ui_display_bold"
-            android:text="@string/_19_09_2019"
+            android:text="19.09.2019"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/tv_date_departure" />
+            app:layout_constraintTop_toTopOf="@id/tv_date_departure"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/tv_address"
@@ -134,11 +140,12 @@
             style="@style/TextOrder"
             android:layout_width="0dp"
             android:fontFamily="@font/sf_ui_display_bold"
-            android:text="@string/address_def"
+            android:text="г.Бишкек, ул.Юнусалиева, 93"
             android:textAlignment="textEnd"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/tv_address"
-            app:layout_constraintTop_toTopOf="@id/tv_address" />
+            app:layout_constraintTop_toTopOf="@id/tv_address"
+            tools:ignore="HardcodedText" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

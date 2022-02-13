@@ -52,7 +52,7 @@
         <item name="android:ellipsize">end</item>
         <item name="android:fontFamily">@font/sf_ui_text_regular</item>
         <item name="android:maxLines">2</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/black_text_30</item>
         <item name="android:textSize">12sp</item>
     </style>
 
@@ -113,6 +113,16 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:fontFamily">@font/sf_ui_text_regular</item>
         <item name="android:textColor">@color/black_text</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="SortTextStyle">
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:background">@drawable/back_for_sort_text_def</item>
+        <item name="android:fontFamily">@font/sf_ui_display_regular</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:textSize">14sp</item>
     </style>
 </resources>

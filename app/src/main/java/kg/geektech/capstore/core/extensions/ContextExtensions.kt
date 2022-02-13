@@ -1,4 +1,4 @@
-package kg.geektech.capstore.extensions
+package kg.geektech.capstore.core.extensions
 
 import android.app.Activity
 import android.content.Context

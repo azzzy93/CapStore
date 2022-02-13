@@ -2,18 +2,15 @@ package kg.geektech.capstore.ui.fragments.edit_profile
 
 import android.Manifest
 import android.os.Bundle
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import kg.geektech.capstore.R
 import kg.geektech.capstore.databinding.FragmentEditProfileBinding
-import kg.geektech.capstore.extensions.load
-import kg.geektech.capstore.extensions.showCustomToast
+import kg.geektech.capstore.core.extensions.load
+import kg.geektech.capstore.core.extensions.showCustomToast
 import kg.geektech.capstore.ui.fragments.profile.ProfileFragment
 
 class EditProfileFragment : Fragment() {

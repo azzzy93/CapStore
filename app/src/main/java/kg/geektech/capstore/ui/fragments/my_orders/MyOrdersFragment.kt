@@ -9,7 +9,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import kg.geektech.capstore.R
 import kg.geektech.capstore.databinding.FragmentMyOrdersBinding
-import kg.geektech.capstore.models.MyOrders
+import kg.geektech.capstore.data.models.MyOrders
 
 class MyOrdersFragment : Fragment(), MyOrdersAdapter.OnItemClick {
 

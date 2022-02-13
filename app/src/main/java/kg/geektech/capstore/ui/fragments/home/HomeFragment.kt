@@ -1,15 +1,18 @@
 package kg.geektech.capstore.ui.fragments.home
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import kg.geektech.capstore.R
+import kg.geektech.capstore.core.extensions.showCustomToast
+import kg.geektech.capstore.data.models.Products
 import kg.geektech.capstore.databinding.FragmentHomeBinding
-import kg.geektech.capstore.models.Products
 import kg.geektech.capstore.ui.adapters.ProductsAdapter
 
 class HomeFragment : Fragment() {
@@ -34,6 +37,7 @@ class HomeFragment : Fragment() {
         initListeners()
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private fun initListeners() {
         binding.tvWatchAllBest.setOnClickListener {
             navigateFragment(R.id.bestsellersFragment)
@@ -53,10 +57,23 @@ class HomeFragment : Fragment() {
         })
         brandsAdapter.setOnItemClick(object : BrandsAdapter.OnItemClick {
             override fun onItemClick(product: Products) {
-                navigateFragment(R.id.productDetailFragment)
+                navigateFragment(R.id.bestsellersFragment)
             }
-
         })
+        binding.etSearch.setOnTouchListener { _, event ->
+            val DRAWABLE_LEFT = 0
+            val DRAWABLE_RIGHT = 2
+            if (event.action == MotionEvent.ACTION_UP) {
+                if (event.rawX >= (binding.etSearch.right - binding.etSearch.compoundDrawables[DRAWABLE_RIGHT].bounds.width())) {
+                    navigateFragment(R.id.sortFragment)
+                    true
+                } else if (event.rawX <= (binding.etSearch.left + binding.etSearch.compoundDrawables[DRAWABLE_LEFT].bounds.width())) {
+                    requireContext().showCustomToast("LEFT", requireActivity(), layoutInflater)
+                    true
+                }
+            }
+            false
+        }
     }
 
     private fun initAdapter() {

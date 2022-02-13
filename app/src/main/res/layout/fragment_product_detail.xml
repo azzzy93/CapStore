@@ -45,10 +45,11 @@
                     android:id="@+id/tv_brand"
                     style="@style/TextBrandProductsRv"
                     android:layout_marginTop="35dp"
-                    android:text="@string/new_era"
+                    android:text="New Era"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
 
                 <FrameLayout
                     android:id="@+id/container_for_like"
@@ -78,19 +79,21 @@
                     android:id="@+id/tv_model"
                     style="@style/TextModelProductsRv"
                     android:layout_marginTop="10dp"
-                    android:text="@string/desc_model"
+                    android:text="French Fries Series"
                     android:textSize="14sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_brand" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_brand"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/tv_price"
                     style="@style/TextPriceProductsRv"
                     android:layout_marginTop="46dp"
-                    android:text="@string/_2500"
+                    android:text="2500 сом"
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_model" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_model"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/tv_size"
@@ -142,10 +145,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="35dp"
                     android:fontFamily="@font/sf_ui_text_regular"
-                    android:text="@string/desc"
+                    android:text="Кепка Golden State Warriors Icon 59FIFTY Fitted Cap имеет вышитый логотип Warriors на передних панелях, а также надпись World Champs с дополнительными командными нашивками и вышивкой по всей остальной части короны. Дополнительные детали включают цветной логотип NBA команды сзади и серый нижний слой."
                     android:textColor="@color/black_text"
                     android:textSize="14sp"
-                    app:layout_constraintTop_toBottomOf="@id/tv_size_s" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_size_s"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/tv_similar_products"

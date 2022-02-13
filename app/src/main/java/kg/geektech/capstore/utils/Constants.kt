@@ -1,4 +1,4 @@
-package kg.geektech.capstore.`object`
+package kg.geektech.capstore.utils
 
 class Constants {
     companion object {
