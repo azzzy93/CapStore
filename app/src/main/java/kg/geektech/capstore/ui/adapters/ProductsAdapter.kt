@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import kg.geektech.capstore.databinding.ListOfBestsellersBinding
 import kg.geektech.capstore.data.models.Products
+import kg.geektech.capstore.databinding.ListOfBestsellersBinding
 
 class ProductsAdapter(private val products: List<Products>) :
     RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
@@ -14,7 +14,8 @@ class ProductsAdapter(private val products: List<Products>) :
     private lateinit var onItemClick: OnItemClick
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = ListOfBestsellersBinding.inflate(LayoutInflater.from(parent.context))
+        val binding =
+            ListOfBestsellersBinding.inflate(LayoutInflater.from(parent.context))
         return ViewHolder(binding)
     }
 
@@ -79,7 +80,6 @@ class ProductsAdapter(private val products: List<Products>) :
             binding.tvPriceOld.setOnClickListener {
                 onItemClick.onClick(product)
             }
-
         }
     }
 

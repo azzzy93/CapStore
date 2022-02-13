@@ -4,16 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import kg.geektech.capstore.R
-import kg.geektech.capstore.databinding.FragmentMyOrdersBinding
+import kg.geektech.capstore.core.ui.BaseFragment
 import kg.geektech.capstore.data.models.MyOrders
+import kg.geektech.capstore.databinding.FragmentMyOrdersBinding
 
-class MyOrdersFragment : Fragment(), MyOrdersAdapter.OnItemClick {
+class MyOrdersFragment : BaseFragment<FragmentMyOrdersBinding>(), MyOrdersAdapter.OnItemClick {
 
-    private lateinit var binding: FragmentMyOrdersBinding
     private lateinit var adapter: MyOrdersAdapter
 
     override fun onCreateView(
@@ -24,14 +22,11 @@ class MyOrdersFragment : Fragment(), MyOrdersAdapter.OnItemClick {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
+    override fun initViews() {
         initAdapter()
-        initListeners()
     }
 
-    private fun initListeners() {
+    override fun initListeners() {
         binding.ivBack.setOnClickListener {
             activity?.supportFragmentManager?.popBackStack()
         }
@@ -60,12 +55,5 @@ class MyOrdersFragment : Fragment(), MyOrdersAdapter.OnItemClick {
 
     override fun onClick(myOrder: MyOrders) {
         navigateFragment(R.id.myOrderDetailFragment)
-    }
-
-    private fun navigateFragment(resId: Int) {
-        val navHostFragment =
-            activity?.supportFragmentManager?.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
-        val navController = navHostFragment.navController
-        navController.navigate(resId)
     }
 }

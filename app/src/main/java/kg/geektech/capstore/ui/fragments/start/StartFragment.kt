@@ -4,14 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.NavHostFragment
 import kg.geektech.capstore.R
+import kg.geektech.capstore.core.ui.BaseFragment
 import kg.geektech.capstore.databinding.FragmentStartBinding
 
-class StartFragment : Fragment() {
-
-    private lateinit var binding: FragmentStartBinding
+class StartFragment : BaseFragment<FragmentStartBinding>() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,13 +18,7 @@ class StartFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        initListeners()
-    }
-
-    private fun initListeners() {
+    override fun initListeners() {
         binding.btnSignIn.setOnClickListener {
             navigateFragment(R.id.signInFragment)
         }
@@ -35,12 +26,5 @@ class StartFragment : Fragment() {
         binding.btnRegAcc.setOnClickListener {
             navigateFragment(R.id.registrationFragment)
         }
-    }
-
-    private fun navigateFragment(resId: Int) {
-        val navHostFragment =
-            activity?.supportFragmentManager?.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
-        val navController = navHostFragment.navController
-        navController.navigate(resId)
     }
 }

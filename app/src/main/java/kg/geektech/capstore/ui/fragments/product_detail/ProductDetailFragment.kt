@@ -4,19 +4,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.tabs.TabLayoutMediator
 import kg.geektech.capstore.R
-import kg.geektech.capstore.databinding.FragmentProductDetailBinding
 import kg.geektech.capstore.core.extensions.showCustomToast
+import kg.geektech.capstore.core.ui.BaseFragment
 import kg.geektech.capstore.data.models.Products
+import kg.geektech.capstore.databinding.FragmentProductDetailBinding
 import kg.geektech.capstore.ui.adapters.ProductsAdapter
 
-class ProductDetailFragment : Fragment(), ProductsAdapter.OnItemClick {
+class ProductDetailFragment : BaseFragment<FragmentProductDetailBinding>(), ProductsAdapter.OnItemClick {
 
-    private lateinit var binding: FragmentProductDetailBinding
     private lateinit var listAdapter: ImageListAdapter
     private lateinit var similarAdapter: ProductsAdapter
 
@@ -28,14 +26,11 @@ class ProductDetailFragment : Fragment(), ProductsAdapter.OnItemClick {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
+    override fun initViews() {
         initAdapter()
-        initListeners()
     }
 
-    private fun initListeners() {
+    override fun initListeners() {
         binding.containerForLike.setOnClickListener {
             if (binding.ivLikeSelected.visibility == View.GONE) {
                 binding.ivLikeSelected.visibility = View.VISIBLE
@@ -96,12 +91,5 @@ class ProductDetailFragment : Fragment(), ProductsAdapter.OnItemClick {
 
     override fun onClick(product: Products) {
         navigateFragment(R.id.productDetailFragment)
-    }
-
-    private fun navigateFragment(resId: Int) {
-        val navHostFragment =
-            activity?.supportFragmentManager?.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
-        val navController = navHostFragment.navController
-        navController.navigate(resId)
     }
 }

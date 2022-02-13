@@ -6,16 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.fragment.app.Fragment
 import kg.geektech.capstore.R
-import kg.geektech.capstore.databinding.FragmentEditProfileBinding
 import kg.geektech.capstore.core.extensions.load
 import kg.geektech.capstore.core.extensions.showCustomToast
+import kg.geektech.capstore.core.ui.BaseFragment
+import kg.geektech.capstore.databinding.FragmentEditProfileBinding
 import kg.geektech.capstore.ui.fragments.profile.ProfileFragment
 
-class EditProfileFragment : Fragment() {
+class EditProfileFragment : BaseFragment<FragmentEditProfileBinding>() {
 
-    private lateinit var binding: FragmentEditProfileBinding
     private val permReqLauncher =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) {
             if (it) {
@@ -37,14 +36,7 @@ class EditProfileFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        initView()
-        initListeners()
-    }
-
-    private fun initView() {
+    override fun initViews() {
         if (arguments != null) {
             binding.etName.setText(arguments?.getString(ProfileFragment.BUNDLE_NAME))
             binding.etEmail.setText(arguments?.getString(ProfileFragment.BUNDLE_EMAIL))
@@ -53,7 +45,7 @@ class EditProfileFragment : Fragment() {
         }
     }
 
-    private fun initListeners() {
+    override fun initListeners() {
         binding.ivBack.setOnClickListener {
             activity?.supportFragmentManager?.popBackStack()
         }

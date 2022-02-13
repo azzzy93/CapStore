@@ -1,19 +1,16 @@
 package kg.geektech.capstore.ui.fragments.registration
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
-import androidx.navigation.fragment.NavHostFragment
 import kg.geektech.capstore.R
+import kg.geektech.capstore.core.ui.BaseFragment
 import kg.geektech.capstore.databinding.FragmentRegistrationBinding
 
-class RegistrationFragment : Fragment() {
-
-    private lateinit var binding: FragmentRegistrationBinding
+class RegistrationFragment : BaseFragment<FragmentRegistrationBinding>() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,13 +20,7 @@ class RegistrationFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        initListeners()
-    }
-
-    private fun initListeners() {
+    override fun initListeners() {
         textIsEmptyListeners()
 
         binding.tvSignIn.setOnClickListener {
@@ -116,12 +107,5 @@ class RegistrationFragment : Fragment() {
             binding.tvHaveAcc.isVisible = false
             binding.tvSignIn.isVisible = false
         }
-    }
-
-    private fun navigateFragment(resId: Int) {
-        val navHostFragment =
-            activity?.supportFragmentManager?.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
-        val navController = navHostFragment.navController
-        navController.navigate(resId)
     }
 }

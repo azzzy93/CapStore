@@ -4,13 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import kg.geektech.capstore.R
+import kg.geektech.capstore.core.ui.BaseFragment
 import kg.geektech.capstore.databinding.FragmentMyOrderDetailBinding
 
-class MyOrderDetailFragment : Fragment() {
-
-    private lateinit var binding: FragmentMyOrderDetailBinding
+class MyOrderDetailFragment : BaseFragment<FragmentMyOrderDetailBinding>() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -20,13 +17,7 @@ class MyOrderDetailFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        initListeners()
-    }
-
-    private fun initListeners() {
+    override fun initListeners() {
         binding.ivBack.setOnClickListener {
             activity?.supportFragmentManager?.popBackStack()
         }
