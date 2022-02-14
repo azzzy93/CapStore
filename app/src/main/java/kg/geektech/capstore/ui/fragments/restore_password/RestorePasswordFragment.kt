@@ -11,12 +11,16 @@ import kg.geektech.capstore.databinding.FragmentRestorePasswordBinding
 
 class RestorePasswordFragment : BaseFragment<FragmentRestorePasswordBinding>() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+    override fun inflateViewBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentRestorePasswordBinding.inflate(inflater, container, false)
-        return binding.root
+    ): FragmentRestorePasswordBinding {
+        return FragmentRestorePasswordBinding.inflate(inflater, container, false)
+    }
+
+    override fun bindViewBinding(view: View): FragmentRestorePasswordBinding {
+        return FragmentRestorePasswordBinding.bind(view)
     }
 
     override fun initViews() {

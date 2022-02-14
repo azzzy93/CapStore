@@ -45,7 +45,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showOrHideView() {
-        navController.navigate(R.id.startFragment)
+        if (true) {
+            navController.navigate(R.id.startFragment)
+        }
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             if (destination.id == R.id.registrationFragment ||

@@ -10,12 +10,16 @@ import kg.geektech.capstore.databinding.FragmentStartBinding
 
 class StartFragment : BaseFragment<FragmentStartBinding>() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+    override fun inflateViewBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentStartBinding.inflate(inflater, container, false)
-        return binding.root
+    ): FragmentStartBinding {
+        return FragmentStartBinding.inflate(inflater, container, false)
+    }
+
+    override fun bindViewBinding(view: View): FragmentStartBinding {
+        return FragmentStartBinding.bind(view)
     }
 
     override fun initListeners() {

@@ -14,12 +14,16 @@ class MyOrdersFragment : BaseFragment<FragmentMyOrdersBinding>(), MyOrdersAdapte
 
     private lateinit var adapter: MyOrdersAdapter
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+    override fun inflateViewBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentMyOrdersBinding.inflate(layoutInflater, container, false)
-        return binding.root
+    ): FragmentMyOrdersBinding {
+        return FragmentMyOrdersBinding.inflate(inflater, container, false)
+    }
+
+    override fun bindViewBinding(view: View): FragmentMyOrdersBinding {
+        return FragmentMyOrdersBinding.bind(view)
     }
 
     override fun initViews() {

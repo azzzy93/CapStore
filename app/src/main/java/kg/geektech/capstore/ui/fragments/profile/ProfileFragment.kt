@@ -11,12 +11,16 @@ import kg.geektech.capstore.databinding.FragmentProfileBinding
 
 class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+    override fun inflateViewBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentProfileBinding.inflate(inflater, container, false)
-        return binding.root
+    ): FragmentProfileBinding {
+        return FragmentProfileBinding.inflate(inflater, container, false)
+    }
+
+    override fun bindViewBinding(view: View): FragmentProfileBinding {
+        return FragmentProfileBinding.bind(view)
     }
 
     override fun initListeners() {

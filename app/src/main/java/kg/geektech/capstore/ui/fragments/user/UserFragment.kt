@@ -10,12 +10,16 @@ import kg.geektech.capstore.databinding.FragmentUserBinding
 
 class UserFragment : BaseFragment<FragmentUserBinding>() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+    override fun inflateViewBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentUserBinding.inflate(inflater, container, false)
-        return binding.root
+    ): FragmentUserBinding {
+        return FragmentUserBinding.inflate(inflater, container, false)
+    }
+
+    override fun bindViewBinding(view: View): FragmentUserBinding {
+        return FragmentUserBinding.bind(view)
     }
 
     override fun initListeners() {

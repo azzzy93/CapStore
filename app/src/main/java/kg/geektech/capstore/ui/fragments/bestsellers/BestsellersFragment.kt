@@ -16,12 +16,16 @@ class BestsellersFragment : BaseFragment<FragmentBestsellersBinding>(),
 
     private lateinit var adapter: ProductsAdapter
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+    override fun inflateViewBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentBestsellersBinding.inflate(inflater, container, false)
-        return binding.root
+    ): FragmentBestsellersBinding {
+        return FragmentBestsellersBinding.inflate(inflater, container, false)
+    }
+
+    override fun bindViewBinding(view: View): FragmentBestsellersBinding {
+        return FragmentBestsellersBinding.bind(view)
     }
 
     override fun initViews() {

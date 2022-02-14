@@ -12,12 +12,16 @@ import kg.geektech.capstore.databinding.FragmentRegistrationBinding
 
 class RegistrationFragment : BaseFragment<FragmentRegistrationBinding>() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+    override fun inflateViewBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentRegistrationBinding.inflate(inflater, container, false)
-        return binding.root
+    ): FragmentRegistrationBinding {
+        return FragmentRegistrationBinding.inflate(inflater, container, false)
+    }
+
+    override fun bindViewBinding(view: View): FragmentRegistrationBinding {
+        return FragmentRegistrationBinding.bind(view)
     }
 
     override fun initListeners() {

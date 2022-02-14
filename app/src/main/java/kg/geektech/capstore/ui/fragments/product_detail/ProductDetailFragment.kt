@@ -18,12 +18,16 @@ class ProductDetailFragment : BaseFragment<FragmentProductDetailBinding>(), Prod
     private lateinit var listAdapter: ImageListAdapter
     private lateinit var similarAdapter: ProductsAdapter
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+    override fun inflateViewBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentProductDetailBinding.inflate(inflater, container, false)
-        return binding.root
+    ): FragmentProductDetailBinding {
+        return FragmentProductDetailBinding.inflate(inflater, container, false)
+    }
+
+    override fun bindViewBinding(view: View): FragmentProductDetailBinding {
+        return FragmentProductDetailBinding.bind(view)
     }
 
     override fun initViews() {

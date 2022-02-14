@@ -11,12 +11,16 @@ import kg.geektech.capstore.databinding.FragmentSignInBinding
 
 class SignInFragment : BaseFragment<FragmentSignInBinding>() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+    override fun inflateViewBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentSignInBinding.inflate(inflater, container, false)
-        return binding.root
+    ): FragmentSignInBinding {
+        return FragmentSignInBinding.inflate(inflater, container, false)
+    }
+
+    override fun bindViewBinding(view: View): FragmentSignInBinding {
+        return FragmentSignInBinding.bind(view)
     }
 
     override fun initListeners() {

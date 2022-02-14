@@ -20,12 +20,16 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     private lateinit var promAdapter: ProductsAdapter
     private lateinit var brandsAdapter: BrandsAdapter
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+    override fun inflateViewBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentHomeBinding.inflate(inflater, container, false)
-        return binding.root
+    ): FragmentHomeBinding {
+        return FragmentHomeBinding.inflate(inflater, container, false)
+    }
+
+    override fun bindViewBinding(view: View): FragmentHomeBinding {
+        return FragmentHomeBinding.bind(view)
     }
 
     override fun initViews() {

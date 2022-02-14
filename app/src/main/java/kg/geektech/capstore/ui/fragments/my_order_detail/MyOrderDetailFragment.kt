@@ -5,16 +5,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kg.geektech.capstore.core.ui.BaseFragment
+import kg.geektech.capstore.databinding.FragmentBestsellersBinding
 import kg.geektech.capstore.databinding.FragmentMyOrderDetailBinding
 
 class MyOrderDetailFragment : BaseFragment<FragmentMyOrderDetailBinding>() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+    override fun inflateViewBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentMyOrderDetailBinding.inflate(inflater, container, false)
-        return binding.root
+    ): FragmentMyOrderDetailBinding {
+        return FragmentMyOrderDetailBinding.inflate(inflater, container, false)
+    }
+
+    override fun bindViewBinding(view: View): FragmentMyOrderDetailBinding {
+        return FragmentMyOrderDetailBinding.bind(view)
     }
 
     override fun initListeners() {
