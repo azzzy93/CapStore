@@ -24,7 +24,7 @@ class RestorePasswordFragment : BaseFragment<FragmentRestorePasswordBinding>() {
     }
 
     override fun initViews() {
-        val text = getString(R.string.enter_6_num) + " +996 788 999 666"
+        val text = getString(R.string.enter_6_num) + " " + "azizbek3993@gmail.com"
         binding.tvDesc6.text = text
     }
 

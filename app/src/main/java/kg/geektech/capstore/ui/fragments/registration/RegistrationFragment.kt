@@ -7,10 +7,16 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
 import kg.geektech.capstore.R
+import kg.geektech.capstore.core.extensions.showCustomToast
+import kg.geektech.capstore.core.network.Status
 import kg.geektech.capstore.core.ui.BaseFragment
+import kg.geektech.capstore.data.models.User
 import kg.geektech.capstore.databinding.FragmentRegistrationBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class RegistrationFragment : BaseFragment<FragmentRegistrationBinding>() {
+
+    private val viewModel: RegistrationViewModel by viewModel()
 
     override fun inflateViewBinding(
         inflater: LayoutInflater,
@@ -29,6 +35,30 @@ class RegistrationFragment : BaseFragment<FragmentRegistrationBinding>() {
 
         binding.tvSignIn.setOnClickListener {
             navigateFragment(R.id.signInFragment)
+        }
+
+        binding.btnReg.setOnClickListener {
+            val password1 = binding.etPassword.text.toString().trim()
+            val password2 = binding.etPasswordConfirm.text.toString().trim()
+            val userName = binding.etName.text.toString().trim()
+            if (password1 == password2) {
+                val user = User(userName, password1)
+                viewModel.setUser(user)
+            } else {
+                requireContext().showCustomToast(
+                    "Введенные Вами пароли не совпадают",
+                    requireActivity(),
+                    layoutInflater
+                )
+            }
+        }
+    }
+
+    override fun initViewModel() {
+        viewModel.registrationUser.observe(this) {
+            if (it.status == Status.SUCCESS) {
+                navController.navigateUp()
+            }
         }
     }
 
@@ -92,24 +122,13 @@ class RegistrationFragment : BaseFragment<FragmentRegistrationBinding>() {
     }
 
     private fun ifFilled(b: Boolean) {
-        if (b) {
-            binding.btnReg.isEnabled = true
-            binding.leftLine.isVisible = false
-            binding.rightLine.isVisible = false
-            binding.tvOr.isVisible = false
-            binding.ivFacebook.isVisible = false
-            binding.ivGoogle.isVisible = false
-            binding.tvHaveAcc.isVisible = true
-            binding.tvSignIn.isVisible = true
-        } else {
-            binding.btnReg.isEnabled = false
-            binding.leftLine.isVisible = true
-            binding.rightLine.isVisible = true
-            binding.tvOr.isVisible = true
-            binding.ivFacebook.isVisible = true
-            binding.ivGoogle.isVisible = true
-            binding.tvHaveAcc.isVisible = false
-            binding.tvSignIn.isVisible = false
-        }
+        binding.btnReg.isEnabled = b
+        binding.leftLine.isVisible = !b
+        binding.rightLine.isVisible = !b
+        binding.tvOr.isVisible = !b
+        binding.ivFacebook.isVisible = !b
+        binding.ivGoogle.isVisible = !b
+        binding.tvHaveAcc.isVisible = b
+        binding.tvSignIn.isVisible = b
     }
 }
