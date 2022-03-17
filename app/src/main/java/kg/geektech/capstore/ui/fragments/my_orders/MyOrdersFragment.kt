@@ -1,9 +1,5 @@
 package kg.geektech.capstore.ui.fragments.my_orders
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import kg.geektech.capstore.R
 import kg.geektech.capstore.core.ui.BaseFragment
@@ -14,16 +10,8 @@ class MyOrdersFragment : BaseFragment<FragmentMyOrdersBinding>(), MyOrdersAdapte
 
     private lateinit var adapter: MyOrdersAdapter
 
-    override fun inflateViewBinding(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): FragmentMyOrdersBinding {
-        return FragmentMyOrdersBinding.inflate(inflater, container, false)
-    }
-
-    override fun bindViewBinding(view: View): FragmentMyOrdersBinding {
-        return FragmentMyOrdersBinding.bind(view)
+    override fun bind(): FragmentMyOrdersBinding {
+        return FragmentMyOrdersBinding.inflate(layoutInflater)
     }
 
     override fun initViews() {

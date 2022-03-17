@@ -35,7 +35,7 @@
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@id/container_for_image"
         app:layout_constraintTop_toBottomOf="@id/container_for_image"
-        tools:text="@string/adidas" />
+        tools:text="Adidas" />
 
     <FrameLayout
         android:id="@+id/container_like"

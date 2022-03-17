@@ -1,9 +1,6 @@
 package kg.geektech.capstore.ui.fragments.restore_password
 
-import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import kg.geektech.capstore.R
 import kg.geektech.capstore.core.extensions.showCustomToast
 import kg.geektech.capstore.core.ui.BaseFragment
@@ -11,20 +8,12 @@ import kg.geektech.capstore.databinding.FragmentRestorePasswordBinding
 
 class RestorePasswordFragment : BaseFragment<FragmentRestorePasswordBinding>() {
 
-    override fun inflateViewBinding(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): FragmentRestorePasswordBinding {
-        return FragmentRestorePasswordBinding.inflate(inflater, container, false)
-    }
-
-    override fun bindViewBinding(view: View): FragmentRestorePasswordBinding {
-        return FragmentRestorePasswordBinding.bind(view)
+    override fun bind(): FragmentRestorePasswordBinding {
+        return FragmentRestorePasswordBinding.inflate(layoutInflater)
     }
 
     override fun initViews() {
-        val text = getString(R.string.enter_6_num) + " +996 788 999 666"
+        val text = getString(R.string.enter_6_num) + " " + "azizbek3993@gmail.com"
         binding.tvDesc6.text = text
     }
 

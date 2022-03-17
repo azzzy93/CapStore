@@ -28,56 +28,67 @@
         android:name="kg.geektech.capstore.ui.fragments.restore_password.RestorePasswordFragment"
         android:label="fragment_restore_password"
         tools:layout="@layout/fragment_restore_password" />
+
     <fragment
         android:id="@+id/homeFragment"
         android:name="kg.geektech.capstore.ui.fragments.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+
     <fragment
         android:id="@+id/bestsellersFragment"
         android:name="kg.geektech.capstore.ui.fragments.bestsellers.BestsellersFragment"
         android:label="fragment_bestsellers"
         tools:layout="@layout/fragment_bestsellers" />
+
     <fragment
         android:id="@+id/likeFragment"
         android:name="kg.geektech.capstore.ui.fragments.like.LikeFragment"
         android:label="fragment_like"
         tools:layout="@layout/fragment_bestsellers" />
+
     <fragment
         android:id="@+id/userFragment"
         android:name="kg.geektech.capstore.ui.fragments.user.UserFragment"
         android:label="fragment_user"
         tools:layout="@layout/fragment_user" />
+
     <fragment
         android:id="@+id/productDetailFragment"
         android:name="kg.geektech.capstore.ui.fragments.product_detail.ProductDetailFragment"
         android:label="fragment_product_detail"
         tools:layout="@layout/fragment_product_detail" />
+
     <fragment
         android:id="@+id/profileFragment"
         android:name="kg.geektech.capstore.ui.fragments.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+
     <fragment
         android:id="@+id/editProfileFragment"
         android:name="kg.geektech.capstore.ui.fragments.edit_profile.EditProfileFragment"
         android:label="fragment_edit_profile"
         tools:layout="@layout/fragment_edit_profile" />
+
     <fragment
         android:id="@+id/myOrdersFragment"
         android:name="kg.geektech.capstore.ui.fragments.my_orders.MyOrdersFragment"
         android:label="fragment_my_orders"
         tools:layout="@layout/fragment_my_orders" />
+
     <fragment
         android:id="@+id/myOrderDetailFragment"
         android:name="kg.geektech.capstore.ui.fragments.my_order_detail.MyOrderDetailFragment"
         android:label="fragment_my_order_detail"
         tools:layout="@layout/fragment_my_order_detail" />
+
     <dialog
         android:id="@+id/cartShopFragment"
         android:name="kg.geektech.capstore.ui.fragments.cart_shop.CartShopFragment"
         android:label="fragment_cart_shop"
         tools:layout="@layout/fragment_cart_shop" />
+
     <dialog
         android:id="@+id/sortFragment"
         android:name="kg.geektech.capstore.ui.fragments.sort.SortFragment"

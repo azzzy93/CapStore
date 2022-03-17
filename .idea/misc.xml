@@ -18,6 +18,7 @@
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/back_for_custom_alert_dialog.xml" value="0.2115" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/back_for_detail_product.xml" value="0.2115" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/back_for_sort_text.xml" value="0.2115" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/back_for_sort_text_def.xml" value="0.2115" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/back_for_sort_text_selected.xml" value="0.2115" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/back_rounded_for_image_product.xml" value="0.2115" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/back_rounded_my_orders.xml" value="0.2115" />
@@ -39,8 +40,10 @@
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/ic_like_def.xml" value="0.2115" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/ic_like_selected.xml" value="0.2115" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/ic_logo_custom_caps.xml" value="0.2115" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/ic_message.xml" value="0.2115" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/ic_minus.xml" value="0.2115" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/ic_password.xml" value="0.2115" />
+        <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/ic_phone.xml" value="0.2115" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/ic_plus.xml" value="0.2115" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/ic_plus_for_edit_profile_image.xml" value="0.2115" />
         <entry key="..\:/Users/Azzzy93/AndroidStudioProjects/CapStore/app/src/main/res/drawable/ic_search_edit_text.xml" value="0.2115" />

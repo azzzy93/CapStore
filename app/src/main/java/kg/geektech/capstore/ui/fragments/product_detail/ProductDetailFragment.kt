@@ -1,9 +1,6 @@
 package kg.geektech.capstore.ui.fragments.product_detail
 
-import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.tabs.TabLayoutMediator
 import kg.geektech.capstore.R
@@ -13,21 +10,14 @@ import kg.geektech.capstore.data.models.Products
 import kg.geektech.capstore.databinding.FragmentProductDetailBinding
 import kg.geektech.capstore.ui.adapters.ProductsAdapter
 
-class ProductDetailFragment : BaseFragment<FragmentProductDetailBinding>(), ProductsAdapter.OnItemClick {
+class ProductDetailFragment : BaseFragment<FragmentProductDetailBinding>(),
+    ProductsAdapter.OnItemClick {
 
     private lateinit var listAdapter: ImageListAdapter
     private lateinit var similarAdapter: ProductsAdapter
 
-    override fun inflateViewBinding(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): FragmentProductDetailBinding {
-        return FragmentProductDetailBinding.inflate(inflater, container, false)
-    }
-
-    override fun bindViewBinding(view: View): FragmentProductDetailBinding {
-        return FragmentProductDetailBinding.bind(view)
+    override fun bind(): FragmentProductDetailBinding {
+        return FragmentProductDetailBinding.inflate(layoutInflater)
     }
 
     override fun initViews() {

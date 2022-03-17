@@ -1,9 +1,5 @@
 package kg.geektech.capstore.ui.fragments.bestsellers
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import kg.geektech.capstore.R
 import kg.geektech.capstore.core.ui.BaseFragment
@@ -16,16 +12,8 @@ class BestsellersFragment : BaseFragment<FragmentBestsellersBinding>(),
 
     private lateinit var adapter: ProductsAdapter
 
-    override fun inflateViewBinding(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): FragmentBestsellersBinding {
-        return FragmentBestsellersBinding.inflate(inflater, container, false)
-    }
-
-    override fun bindViewBinding(view: View): FragmentBestsellersBinding {
-        return FragmentBestsellersBinding.bind(view)
+    override fun bind(): FragmentBestsellersBinding {
+        return FragmentBestsellersBinding.inflate(layoutInflater)
     }
 
     override fun initViews() {

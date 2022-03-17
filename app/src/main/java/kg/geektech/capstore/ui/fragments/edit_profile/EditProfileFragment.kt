@@ -28,16 +28,8 @@ class EditProfileFragment : BaseFragment<FragmentEditProfileBinding>() {
             }
         }
 
-    override fun inflateViewBinding(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): FragmentEditProfileBinding {
-        return FragmentEditProfileBinding.inflate(inflater, container, false)
-    }
-
-    override fun bindViewBinding(view: View): FragmentEditProfileBinding {
-        return FragmentEditProfileBinding.bind(view)
+    override fun bind(): FragmentEditProfileBinding {
+        return FragmentEditProfileBinding.inflate(layoutInflater)
     }
 
     override fun initViews() {

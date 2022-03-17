@@ -14,9 +14,9 @@
     <string name="forgot_password">Забыли пароль?</string>
     <string name="restore">Восстановить</string>
     <string name="restore_password">Восстановить пароль</string>
-    <string name="enter_code_sms">Введите номер, указанный при регистрации. Вам будет отправлен код подтверждения по смс.</string>
+    <string name="enter_code_email">Введите почту, указанную при регистрации. Вам будет отправлен код подтверждения по почте.</string>
     <string name="send">Отправить</string>
-    <string name="enter_6_num">Введите 6 значный код, отправленный на номер</string>
+    <string name="enter_6_num">Введите 6 значный код, отправленный на почту</string>
     <string name="enter_new_password">Введите новый пароль</string>
     <string name="confirm_new_password">Подтвердите новый пароль</string>
     <string name="you_update_password">Вы обновили пароль</string>

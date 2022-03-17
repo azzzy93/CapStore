@@ -1,9 +1,6 @@
 package kg.geektech.capstore.ui.fragments.profile
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.navigation.fragment.NavHostFragment
 import kg.geektech.capstore.R
 import kg.geektech.capstore.core.ui.BaseFragment
@@ -11,16 +8,8 @@ import kg.geektech.capstore.databinding.FragmentProfileBinding
 
 class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
 
-    override fun inflateViewBinding(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): FragmentProfileBinding {
-        return FragmentProfileBinding.inflate(inflater, container, false)
-    }
-
-    override fun bindViewBinding(view: View): FragmentProfileBinding {
-        return FragmentProfileBinding.bind(view)
+    override fun bind(): FragmentProfileBinding {
+        return FragmentProfileBinding.inflate(layoutInflater)
     }
 
     override fun initListeners() {

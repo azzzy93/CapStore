@@ -3,7 +3,6 @@ package kg.geektech.capstore.core.network
 data class Resource<T>(val status: Status, val data: T?, val message: String?, val code: Int?) {
 
     companion object {
-
         fun <T> success(data: T?, code: Int? = null): Resource<T> {
             return Resource(Status.SUCCESS, data, null, code)
         }

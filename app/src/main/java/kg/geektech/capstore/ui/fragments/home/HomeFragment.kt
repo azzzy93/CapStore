@@ -2,6 +2,7 @@ package kg.geektech.capstore.ui.fragments.home
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
@@ -20,16 +21,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     private lateinit var promAdapter: ProductsAdapter
     private lateinit var brandsAdapter: BrandsAdapter
 
-    override fun inflateViewBinding(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): FragmentHomeBinding {
-        return FragmentHomeBinding.inflate(inflater, container, false)
-    }
-
-    override fun bindViewBinding(view: View): FragmentHomeBinding {
-        return FragmentHomeBinding.bind(view)
+    override fun bind(): FragmentHomeBinding {
+        return FragmentHomeBinding.inflate(layoutInflater)
     }
 
     override fun initViews() {
