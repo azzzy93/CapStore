@@ -2,7 +2,7 @@ package kg.geektech.capstore.ui.fragments.like
 
 import androidx.recyclerview.widget.GridLayoutManager
 import kg.geektech.capstore.R
-import kg.geektech.capstore.core.BaseFragment
+import kg.geektech.capstore.core.base.BaseFragment
 import kg.geektech.capstore.data.models.Products
 import kg.geektech.capstore.databinding.FragmentBestsellersBinding
 import kg.geektech.capstore.ui.adapters.ProductsAdapter

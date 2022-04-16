@@ -1,4 +1,4 @@
-package kg.geektech.capstore.core
+package kg.geektech.capstore.core.base
 
 sealed class BaseResult<out T : Any, out U : Any> {
 

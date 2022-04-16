@@ -5,14 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationItemView
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView
+import dagger.hilt.android.AndroidEntryPoint
 import kg.geektech.capstore.R
 import kg.geektech.capstore.databinding.ActivityMainBinding
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -48,15 +51,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            if (destination.id == R.id.registrationFragment ||
-                destination.id == R.id.restorePasswordFragment ||
-                destination.id == R.id.signInFragment ||
-                destination.id == R.id.startFragment
-            ) {
-                binding.bottomNav.visibility = View.GONE
-            } else {
-                binding.bottomNav.visibility = View.VISIBLE
-            }
+            binding.bottomNav.isVisible = !(destination.id == R.id.registrationFragment ||
+                    destination.id == R.id.restorePasswordFragment ||
+                    destination.id == R.id.signInFragment ||
+                    destination.id == R.id.startFragment)
         }
     }
 }

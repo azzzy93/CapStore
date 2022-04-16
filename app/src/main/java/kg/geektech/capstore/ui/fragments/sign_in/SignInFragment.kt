@@ -1,8 +1,7 @@
 package kg.geektech.capstore.ui.fragments.sign_in
 
 import androidx.core.widget.addTextChangedListener
-import kg.geektech.capstore.R
-import kg.geektech.capstore.core.BaseFragment
+import kg.geektech.capstore.core.base.BaseFragment
 import kg.geektech.capstore.databinding.FragmentSignInBinding
 
 class SignInFragment : BaseFragment<FragmentSignInBinding>() {

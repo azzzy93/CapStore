@@ -4,7 +4,7 @@ import android.Manifest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.navigation.fragment.navArgs
 import kg.geektech.capstore.R
-import kg.geektech.capstore.core.BaseFragment
+import kg.geektech.capstore.core.base.BaseFragment
 import kg.geektech.capstore.core.extensions.load
 import kg.geektech.capstore.core.extensions.showCustomToast
 import kg.geektech.capstore.databinding.FragmentEditProfileBinding

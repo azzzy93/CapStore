@@ -23,6 +23,6 @@
         android:gravity="center"
         android:textColor="@color/black_text"
         android:textSize="12sp"
-        tools:text="@string/adidas" />
+        tools:text="Adidas" />
 
 </LinearLayout>

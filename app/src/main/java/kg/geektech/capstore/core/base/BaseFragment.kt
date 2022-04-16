@@ -1,4 +1,4 @@
-package kg.geektech.capstore.core
+package kg.geektech.capstore.core.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -31,8 +31,8 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         initViews()
-        initListeners()
         initViewModel()
+        initListeners()
     }
 
     open fun initViews() {}

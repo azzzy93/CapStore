@@ -1,8 +1,7 @@
 package kg.geektech.capstore.ui.fragments.my_orders
 
 import androidx.recyclerview.widget.LinearLayoutManager
-import kg.geektech.capstore.R
-import kg.geektech.capstore.core.BaseFragment
+import kg.geektech.capstore.core.base.BaseFragment
 import kg.geektech.capstore.data.models.MyOrders
 import kg.geektech.capstore.databinding.FragmentMyOrdersBinding
 

@@ -2,7 +2,7 @@ package kg.geektech.capstore.ui.fragments.registration
 
 import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
-import kg.geektech.capstore.core.BaseFragment
+import kg.geektech.capstore.core.base.BaseFragment
 import kg.geektech.capstore.core.extensions.showCustomToast
 import kg.geektech.capstore.databinding.FragmentRegistrationBinding
 

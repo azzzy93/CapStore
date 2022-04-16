@@ -3,7 +3,7 @@ package kg.geektech.capstore.ui.fragments.restore_password
 import android.view.View
 import kg.geektech.capstore.R
 import kg.geektech.capstore.core.extensions.showCustomToast
-import kg.geektech.capstore.core.BaseFragment
+import kg.geektech.capstore.core.base.BaseFragment
 import kg.geektech.capstore.databinding.FragmentRestorePasswordBinding
 
 class RestorePasswordFragment : BaseFragment<FragmentRestorePasswordBinding>() {
