@@ -2,7 +2,7 @@ package kg.geektech.capstore.ui.fragments.sign_in
 
 import androidx.core.widget.addTextChangedListener
 import kg.geektech.capstore.R
-import kg.geektech.capstore.core.ui.BaseFragment
+import kg.geektech.capstore.core.BaseFragment
 import kg.geektech.capstore.databinding.FragmentSignInBinding
 
 class SignInFragment : BaseFragment<FragmentSignInBinding>() {
@@ -15,11 +15,11 @@ class SignInFragment : BaseFragment<FragmentSignInBinding>() {
         textIsEmptyListeners()
 
         binding.tvRestore.setOnClickListener {
-            navigateFragment(R.id.restorePasswordFragment)
+            navController.navigate(SignInFragmentDirections.actionSignInFragmentToRestorePasswordFragment())
         }
 
         binding.tvRegistration.setOnClickListener {
-            navigateFragment(R.id.registrationFragment)
+            navController.navigate(SignInFragmentDirections.actionSignInFragmentToRegistrationFragment())
         }
     }
 

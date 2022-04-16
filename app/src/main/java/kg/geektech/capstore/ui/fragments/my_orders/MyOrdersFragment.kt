@@ -2,7 +2,7 @@ package kg.geektech.capstore.ui.fragments.my_orders
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import kg.geektech.capstore.R
-import kg.geektech.capstore.core.ui.BaseFragment
+import kg.geektech.capstore.core.BaseFragment
 import kg.geektech.capstore.data.models.MyOrders
 import kg.geektech.capstore.databinding.FragmentMyOrdersBinding
 
@@ -46,6 +46,6 @@ class MyOrdersFragment : BaseFragment<FragmentMyOrdersBinding>(), MyOrdersAdapte
     }
 
     override fun onClick(myOrder: MyOrders) {
-        navigateFragment(R.id.myOrderDetailFragment)
+        navController.navigate(MyOrdersFragmentDirections.actionMyOrdersFragmentToMyOrderDetailFragment())
     }
 }

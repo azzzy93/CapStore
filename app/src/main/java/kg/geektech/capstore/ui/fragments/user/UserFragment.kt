@@ -1,7 +1,6 @@
 package kg.geektech.capstore.ui.fragments.user
 
-import kg.geektech.capstore.R
-import kg.geektech.capstore.core.ui.BaseFragment
+import kg.geektech.capstore.core.BaseFragment
 import kg.geektech.capstore.databinding.FragmentUserBinding
 
 class UserFragment : BaseFragment<FragmentUserBinding>() {
@@ -12,11 +11,11 @@ class UserFragment : BaseFragment<FragmentUserBinding>() {
 
     override fun initListeners() {
         binding.tvProfile.setOnClickListener {
-            navigateFragment(R.id.profileFragment)
+            navController.navigate(UserFragmentDirections.actionUserFragmentToProfileFragment())
         }
 
         binding.tvMyOrders.setOnClickListener {
-            navigateFragment(R.id.myOrdersFragment)
+            navController.navigate(UserFragmentDirections.actionUserFragmentToMyOrdersFragment())
         }
     }
 }

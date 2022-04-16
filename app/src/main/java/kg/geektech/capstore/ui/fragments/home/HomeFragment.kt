@@ -1,16 +1,11 @@
 package kg.geektech.capstore.ui.fragments.home
 
 import android.annotation.SuppressLint
-import android.os.Bundle
-import android.util.Log
-import android.view.LayoutInflater
 import android.view.MotionEvent
-import android.view.View
-import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import kg.geektech.capstore.R
+import kg.geektech.capstore.core.BaseFragment
 import kg.geektech.capstore.core.extensions.showCustomToast
-import kg.geektech.capstore.core.ui.BaseFragment
 import kg.geektech.capstore.data.models.Products
 import kg.geektech.capstore.databinding.FragmentHomeBinding
 import kg.geektech.capstore.ui.adapters.ProductsAdapter
@@ -32,24 +27,24 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     @SuppressLint("ClickableViewAccessibility")
     override fun initListeners() {
         binding.tvWatchAllBest.setOnClickListener {
-            navigateFragment(R.id.bestsellersFragment)
+            navController.navigate(HomeFragmentDirections.actionHomeFragmentToBestsellersFragment())
         }
         binding.tvWatchAllProm.setOnClickListener {
-            navigateFragment(R.id.bestsellersFragment)
+            navController.navigate(HomeFragmentDirections.actionHomeFragmentToBestsellersFragment())
         }
         bestAdapter.setOnItemClick(object : ProductsAdapter.OnItemClick {
             override fun onClick(product: Products) {
-                navigateFragment(R.id.productDetailFragment)
+                navController.navigate(HomeFragmentDirections.actionHomeFragmentToProductDetailFragment())
             }
         })
         promAdapter.setOnItemClick(object : ProductsAdapter.OnItemClick {
             override fun onClick(product: Products) {
-                navigateFragment(R.id.productDetailFragment)
+                navController.navigate(HomeFragmentDirections.actionHomeFragmentToProductDetailFragment())
             }
         })
         brandsAdapter.setOnItemClick(object : BrandsAdapter.OnItemClick {
             override fun onItemClick(product: Products) {
-                navigateFragment(R.id.bestsellersFragment)
+                navController.navigate(HomeFragmentDirections.actionHomeFragmentToBestsellersFragment())
             }
         })
         binding.etSearch.setOnTouchListener { _, event ->
@@ -57,7 +52,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             val DRAWABLE_RIGHT = 2
             if (event.action == MotionEvent.ACTION_UP) {
                 if (event.rawX >= (binding.etSearch.right - binding.etSearch.compoundDrawables[DRAWABLE_RIGHT].bounds.width())) {
-                    navigateFragment(R.id.sortFragment)
+                    navController.navigate(HomeFragmentDirections.actionHomeFragmentToSortFragment())
                     true
                 } else if (event.rawX <= (binding.etSearch.left + binding.etSearch.compoundDrawables[DRAWABLE_LEFT].bounds.width())) {
                     requireContext().showCustomToast("LEFT", requireActivity(), layoutInflater)

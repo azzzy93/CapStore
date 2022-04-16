@@ -1,6 +1,6 @@
 package kg.geektech.capstore.ui.fragments.my_order_detail
 
-import kg.geektech.capstore.core.ui.BaseFragment
+import kg.geektech.capstore.core.BaseFragment
 import kg.geektech.capstore.databinding.FragmentMyOrderDetailBinding
 
 class MyOrderDetailFragment : BaseFragment<FragmentMyOrderDetailBinding>() {
@@ -11,7 +11,7 @@ class MyOrderDetailFragment : BaseFragment<FragmentMyOrderDetailBinding>() {
 
     override fun initListeners() {
         binding.ivBack.setOnClickListener {
-            activity?.supportFragmentManager?.popBackStack()
+            navController.navigateUp()
         }
     }
 }

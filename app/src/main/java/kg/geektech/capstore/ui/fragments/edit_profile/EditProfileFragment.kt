@@ -1,17 +1,13 @@
 package kg.geektech.capstore.ui.fragments.edit_profile
 
 import android.Manifest
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.navigation.fragment.navArgs
 import kg.geektech.capstore.R
+import kg.geektech.capstore.core.BaseFragment
 import kg.geektech.capstore.core.extensions.load
 import kg.geektech.capstore.core.extensions.showCustomToast
-import kg.geektech.capstore.core.ui.BaseFragment
 import kg.geektech.capstore.databinding.FragmentEditProfileBinding
-import kg.geektech.capstore.ui.fragments.profile.ProfileFragment
 
 class EditProfileFragment : BaseFragment<FragmentEditProfileBinding>() {
 
@@ -27,23 +23,22 @@ class EditProfileFragment : BaseFragment<FragmentEditProfileBinding>() {
                 binding.ivUser.load(it.toString())
             }
         }
+    private val args: EditProfileFragmentArgs by navArgs()
 
     override fun bind(): FragmentEditProfileBinding {
         return FragmentEditProfileBinding.inflate(layoutInflater)
     }
 
     override fun initViews() {
-        if (arguments != null) {
-            binding.etName.setText(arguments?.getString(ProfileFragment.BUNDLE_NAME))
-            binding.etEmail.setText(arguments?.getString(ProfileFragment.BUNDLE_EMAIL))
-            binding.etPhoneNumber.setText(arguments?.getString(ProfileFragment.BUNDLE_PHONE))
-            binding.etAddress.setText(arguments?.getString(ProfileFragment.BUNDLE_ADDRESS))
-        }
+        binding.etName.setText(args.userName)
+        binding.etEmail.setText(args.userEmail)
+        binding.etPhoneNumber.setText(args.userPhone)
+        binding.etAddress.setText(args.userAddress)
     }
 
     override fun initListeners() {
         binding.ivBack.setOnClickListener {
-            activity?.supportFragmentManager?.popBackStack()
+            navController.navigateUp()
         }
 
         binding.containerForImageProfile.setOnClickListener {

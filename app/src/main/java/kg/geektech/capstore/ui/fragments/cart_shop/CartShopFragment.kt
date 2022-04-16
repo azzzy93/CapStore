@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -19,6 +21,9 @@ class CartShopFragment : BottomSheetDialogFragment() {
 
     private lateinit var binding: FragmentCartShopBinding
     private lateinit var adapter: CartShopAdapter
+    private val navController: NavController by lazy {
+        Navigation.findNavController(requireActivity(), R.id.fragmentContainerView)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -66,15 +71,8 @@ class CartShopFragment : BottomSheetDialogFragment() {
         btnToMainPage.setOnClickListener {
             dialog.dismiss()
             dismiss()
-            navigateFragment(R.id.homeFragment)
+            navController.navigate(CartShopFragmentDirections.actionCartShopFragmentToHomeFragment())
         }
-    }
-
-    private fun navigateFragment(resId: Int) {
-        val navHostFragment =
-            activity?.supportFragmentManager?.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
-        val navController = navHostFragment.navController
-        navController.navigate(resId)
     }
 
     private fun initAdapter() {

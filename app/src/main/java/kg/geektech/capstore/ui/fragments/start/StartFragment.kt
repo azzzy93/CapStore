@@ -1,7 +1,6 @@
 package kg.geektech.capstore.ui.fragments.start
 
-import kg.geektech.capstore.R
-import kg.geektech.capstore.core.ui.BaseFragment
+import kg.geektech.capstore.core.BaseFragment
 import kg.geektech.capstore.databinding.FragmentStartBinding
 
 class StartFragment : BaseFragment<FragmentStartBinding>() {
@@ -12,11 +11,11 @@ class StartFragment : BaseFragment<FragmentStartBinding>() {
 
     override fun initListeners() {
         binding.btnSignIn.setOnClickListener {
-            navigateFragment(R.id.signInFragment)
+            navController.navigate(StartFragmentDirections.actionStartFragmentToSignInFragment())
         }
 
         binding.btnRegAcc.setOnClickListener {
-            navigateFragment(R.id.registrationFragment)
+            navController.navigate(StartFragmentDirections.actionStartFragmentToRegistrationFragment())
         }
     }
 }

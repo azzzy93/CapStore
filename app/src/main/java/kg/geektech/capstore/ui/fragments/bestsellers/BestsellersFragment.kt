@@ -2,7 +2,7 @@ package kg.geektech.capstore.ui.fragments.bestsellers
 
 import androidx.recyclerview.widget.GridLayoutManager
 import kg.geektech.capstore.R
-import kg.geektech.capstore.core.ui.BaseFragment
+import kg.geektech.capstore.core.BaseFragment
 import kg.geektech.capstore.data.models.Products
 import kg.geektech.capstore.databinding.FragmentBestsellersBinding
 import kg.geektech.capstore.ui.adapters.ProductsAdapter
@@ -23,7 +23,7 @@ class BestsellersFragment : BaseFragment<FragmentBestsellersBinding>(),
 
     override fun initListeners() {
         binding.ivBack.setOnClickListener {
-            activity?.supportFragmentManager?.popBackStack()
+            navController.navigateUp()
         }
     }
 
@@ -50,6 +50,6 @@ class BestsellersFragment : BaseFragment<FragmentBestsellersBinding>(),
     }
 
     override fun onClick(product: Products) {
-        navigateFragment(R.id.productDetailFragment)
+        navController.navigate(BestsellersFragmentDirections.actionBestsellersFragmentToProductDetailFragment())
     }
 }

@@ -1,5 +1,0 @@
-package kg.geektech.capstore.utils
-
-object Constants {
-    const val TOKEN = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ2MDM1NjIyLCJqdGkiOiJiNjA0ZTAxOWJkYjM0NTAxOTQ0NjQ5OTEyYjhiZjFlMiIsInVzZXJfaWQiOjF9.1nrfbOMeXPAsKPKCXRF8VksTqY0BfcgaploJrB9iQFw"
-}

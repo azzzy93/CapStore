@@ -2,17 +2,11 @@ package kg.geektech.capstore.ui.fragments.registration
 
 import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
-import kg.geektech.capstore.R
+import kg.geektech.capstore.core.BaseFragment
 import kg.geektech.capstore.core.extensions.showCustomToast
-import kg.geektech.capstore.core.network.Status
-import kg.geektech.capstore.core.ui.BaseFragment
-import kg.geektech.capstore.data.models.User
 import kg.geektech.capstore.databinding.FragmentRegistrationBinding
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class RegistrationFragment : BaseFragment<FragmentRegistrationBinding>() {
-
-    private val viewModel: RegistrationViewModel by viewModel()
 
     override fun bind(): FragmentRegistrationBinding {
         return FragmentRegistrationBinding.inflate(layoutInflater)
@@ -22,30 +16,18 @@ class RegistrationFragment : BaseFragment<FragmentRegistrationBinding>() {
         textIsEmptyListeners()
 
         binding.tvSignIn.setOnClickListener {
-            navigateFragment(R.id.signInFragment)
+            navController.navigate(RegistrationFragmentDirections.actionRegistrationFragmentToSignInFragment())
         }
 
         binding.btnReg.setOnClickListener {
             val password1 = binding.etPassword.text.toString().trim()
             val password2 = binding.etPasswordConfirm.text.toString().trim()
-            val userName = binding.etName.text.toString().trim()
-            if (password1 == password2) {
-                val user = User(userName, password1)
-                viewModel.setUser(user)
-            } else {
+            if (password1 != password2) {
                 requireContext().showCustomToast(
                     "Введенные Вами пароли не совпадают",
                     requireActivity(),
                     layoutInflater
                 )
-            }
-        }
-    }
-
-    override fun initViewModel() {
-        viewModel.registrationUser.observe(this) {
-            if (it.status == Status.SUCCESS) {
-                navigateFragment()
             }
         }
     }
